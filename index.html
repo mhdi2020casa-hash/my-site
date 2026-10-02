@@ -2,15 +2,82 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>Sit Dyali</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mow9i3i L-Shakhṣi</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
-        h1 { color: #2c3e50; }
-        p { color: #7f8c8d; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        p.subtitle {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 25px;
+        }
+        .bio {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #d1d8e0;
+            margin-bottom: 30px;
+        }
+        .links a {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #ffffff;
+            color: #1e3c72;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .links a:hover {
+            background: #f1c40f;
+            color: #000;
+            transform: translateY(-3px);
+        }
     </style>
 </head>
 <body>
-    <h1>Salam! M3akom f l-site dyali l-jdid!</h1>
-    <p>Hada sit khddam dima 100% fabor 3la GitHub Pages.</p>
+    <div class="card">
+        <h1>M مرحبا بكم f Mow9i3i!</h1>
+        <p class="subtitle">Développeur & Créateur d Content</p>
+        <p class="bio">
+            Hada huwa l-mow9i3 l-shakhṣi dyali li صاوبت بـ GitHub Pages.
+            M9ad b HTML wa CSS!
+        </p>
+        <div class="links">
+            <a href="https://github.com/mhdi2020casa-hash" target="_blank">Mon Profil GitHub</a>
+            <a href="mailto:example@email.com">Twaṣel M3aya</a>
+        </div>
+    </div>
 </body>
 </html>
