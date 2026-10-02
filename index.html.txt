@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Sit Dyali</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
+        h1 { color: #2c3e50; }
+        p { color: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <h1>Salam! M3akom f l-site dyali l-jdid!</h1>
+    <p>Hada sit khddam dima 100% fabor 3la GitHub Pages.</p>
+</body>
+</html>
