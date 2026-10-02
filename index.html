@@ -3,81 +3,262 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mow9i3i L-Shakhṣi</title>
+    <title>MEHDI DHR | براند طرز الأنمي</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #fff;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
             min-height: 100vh;
+        }
+
+        /* ----- الصفحة الأولى: الترحيب ----- */
+        #welcome-page {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            padding: 20px;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 40px;
+        }
+
+        .btn-enter {
+            padding: 15px 45px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #0f172a;
+            background: #38bdf8;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .btn-enter:hover {
+            background: #0284c7;
+            color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.8);
+        }
+
+        /* ----- الصفحة الثانية: المنتجات ----- */
+        #main-content {
+            display: none;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #334155;
+            padding-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8;
+        }
+
+        header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #1e293b;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #334155;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            border-color: #38bdf8;
+        }
+
+        .product-img {
+            width: 100%;
+            height: 260px;
+            background-color: #334155;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            position: relative;
         }
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
+
+        .product-img img {
             width: 100%;
-            text-align: center;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            height: 100%;
+            object-fit: cover;
         }
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 10px;
-            color: #ffffff;
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
-        p.subtitle {
-            font-size: 1.1rem;
-            color: #e0e0e0;
-            margin-bottom: 25px;
+
+        .product-info {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
         }
-        .bio {
-            font-size: 0.95rem;
-            line-height: 1.6;
-            color: #d1d8e0;
-            margin-bottom: 30px;
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #f1f5f9;
         }
-        .links a {
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #38bdf8;
+            margin-bottom: 15px;
+        }
+
+        .btn-order {
             display: block;
             width: 100%;
             padding: 12px;
-            margin: 10px 0;
-            background: #ffffff;
-            color: #1e3c72;
+            text-align: center;
+            background: #22c55e;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 10px;
-            transition: all 0.3s ease;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
         }
-        .links a:hover {
-            background: #f1c40f;
-            color: #000;
-            transform: translateY(-3px);
+
+        .btn-order:hover {
+            background: #16a34a;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>M مرحبا بكم f Mow9i3i!</h1>
-        <p class="subtitle">Développeur & Créateur d Content</p>
-        <p class="bio">
-            Hada huwa l-mow9i3 l-shakhṣi dyali li صاوبت بـ GitHub Pages.
-            M9ad b HTML wa CSS!
-        </p>
-        <div class="links">
-            <a href="https://github.com/mhdi2020casa-hash" target="_blank">Mon Profil GitHub</a>
-            <a href="mailto:example@email.com">Twaṣel M3aya</a>
+
+    <!-- الصفحة الأولى: الترحيب -->
+    <div id="welcome-page">
+        <h1 class="hero-title">MEHDI DHR</h1>
+        <p class="hero-subtitle">براند ملابس وطرز الأنمي الاحترافي</p>
+        <button class="btn-enter" onclick="openBrand()">ENTER</button>
+    </div>
+
+    <!-- الصفحة الثانية: الكتالوج -->
+    <div id="main-content">
+        <header>
+            <h1>MEHDI DHR BRAND</h1>
+            <p>تشكيلة تيشرتات بطرز الأنمي المخصص عالية الجودة</p>
+        </header>
+
+        <div class="products-grid">
+
+            <!-- تيشرت 1 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="badge">طرز بريميوم</span>
+                    <img src="https://via.placeholder.com/400x400/1e293b/38bdf8?text=Anime+T-Shirt+1" alt="تيشرت أنمي">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">تيشرت عيون الأنمي (طرز)</h3>
+                    <p class="product-desc">تيشرت قطن 100% مع طرز دقيق لعيون الأنمي في الوسط.</p>
+                    <div class="product-price">200 درهم</div>
+                    <button class="btn-order" onclick="commander('تيشرت عيون الأنمي')">Demander</button>
+                </div>
+            </div>
+
+            <!-- تيشرت 2 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="badge">كمية محدودة</span>
+                    <img src="https://via.placeholder.com/400x400/1e293b/38bdf8?text=Anime+T-Shirt+2" alt="تيشرت أنمي">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">تيشرت شخصية مينيمليست</h3>
+                    <p class="product-desc">تصميم هادئ بطرز أنيق على الصدر، قطن 100% جودة ممتازة.</p>
+                    <div class="product-price">220 درهم</div>
+                    <button class="btn-order" onclick="commander('تيشرت شخصية مينيمليست')">Demander</button>
+                </div>
+            </div>
+
+            <!-- تيشرت 3 -->
+            <div class="product-card">
+                <div class="product-img">
+                    <span class="badge">الأكثر مبيعاً</span>
+                    <img src="https://via.placeholder.com/400x400/1e293b/38bdf8?text=Anime+T-Shirt+3" alt="تيشرت أنمي">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">تيشرت لوجو أنمي مخصص</h3>
+                    <p class="product-desc">لوجو أنمي مطروز في الأكتاف والصدر بخيوط متينة وجذابة.</p>
+                    <div class="product-price">250 درهم</div>
+                    <button class="btn-order" onclick="commander('تيشرت لوجو أنمي')">Demander</button>
+                </div>
+            </div>
+
         </div>
     </div>
+
+    <script>
+        function openBrand() {
+            document.getElementById('welcome-page').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+        }
+
+        function commander(productName) {
+            alert('شكراً لك! اخترت: ' + productName + '\nتواصل معنا عبر الوتساب للطلب!');
+        }
+    </script>
 </body>
 </html>
