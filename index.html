@@ -18,9 +18,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-        #hacker-screen {
-            display: none;
+            cursor: pointer; /* Bach yban l-user anna l-écran cliquable */
         }
         h1 {
             font-size: 45px;
@@ -36,23 +34,6 @@
             color: yellow;
             font-weight: bold;
         }
-        #start-btn {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 20px 40px;
-            font-size: 22px;
-            font-weight: bold;
-            border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0 0 20px red;
-            animation: pulse 1s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
         @keyframes flicker {
             0% { opacity: 1; }
             50% { opacity: 0.8; }
@@ -60,43 +41,36 @@
         }
     </style>
 </head>
-<body>
+<body onclick="startPrank()">
 
-    <!-- Mar7la 1: Button bach ykiliki -->
-    <div id="welcome-screen">
-        <h2 style="color: white; margin-bottom: 20px;">🎉 Mabrouk 3lik! Rba7ti Jayeza Kbira 🎁</h2>
-        <button id="start-btn" onclick="startPrank()">Dkhol Chof Jayeza Dyalek 📲</button>
-    </div>
-
-    <!-- Mar7la 2: Screen dial l-Khlc -->
-    <div id="hacker-screen">
-        <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
-        <p>Suspicious activity detected on this IP: <span class="ip-address">173.245.48.0</span></p>
-        <p>Your location has been tracked. Data extraction is in progress...</p>
-        <p>Do not turn off your device. Your files are being encrypted.</p>
-    </div>
+    <!-- Screen dial l-Khlc direkt -->
+    <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
+    <p>Suspicious activity detected on this IP: <span class="ip-address">173.245.48.0</span></p>
+    <p>Your location has been tracked. Data extraction is in progress...</p>
+    <p style="color: #00ff00; font-size: 14px; margin-top: 30px;">(Kiki f ay blasa bach tkml l-3amaliya)</p>
 
     <script>
-        function startPrank() {
-            // 1. Khfi welcome screen w byan hacker screen
-            document.getElementById('welcome-screen').style.display = 'none';
-            document.getElementById('hacker-screen').style.display = 'block';
+        let triggered = false;
 
-            // 2. Sawt dyal l-Telephone (Text-to-Speech) - Kayhdar bssawt 9awi 100%
+        function startPrank() {
+            if (triggered) return; // Bash mat3awdch tkhdm mra okhra ila clika tani
+            triggered = true;
+
+            // 1. Sawt dyal l-Telephone (Text-to-Speech)
             if ('speechSynthesis' in window) {
                 var utterance = new SpeechSynthesisUtterance("Warning! System hacked! Your phone is compromised!");
-                utterance.rate = 1.0; // Sor3a d ssawt
-                utterance.pitch = 0.5; // Sawt khchin bhal l-hacker
+                utterance.rate = 1.0;
+                utterance.pitch = 0.5;
                 window.speechSynthesis.speak(utterance);
             }
 
-            // 3. Dir Fullscreen
+            // 2. Dir Fullscreen
             var el = document.documentElement;
             if (el.requestFullscreen) {
                 el.requestFullscreen();
             }
 
-            // 4. Mor 5 saniyat, tla3 l-message
+            // 3. Mor 5 saniyat, tla3 l-message dyalak
             setTimeout(function() {
                 alert("Malak makhloç? Mtkhlaç ma walo ra dahkin! 😂🔥");
             }, 5000);
