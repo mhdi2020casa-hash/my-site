@@ -19,7 +19,6 @@
             justify-content: center;
             align-items: center;
         }
-        /* L-écran dial l-khl3a mkhalfi f l-bidaya */
         #hacker-screen {
             display: none;
         }
@@ -37,7 +36,6 @@
             color: yellow;
             font-weight: bold;
         }
-        /* Style dial l-button lli kaykhalo ykiliki */
         #start-btn {
             background-color: red;
             color: white;
@@ -64,16 +62,13 @@
 </head>
 <body>
 
-    <!-- Sawt (Audio) -->
-    <audio id="prankSound" src="https://www.myinstants.com/media/sounds/warning-sound_1.mp3" preload="auto" loop></audio>
-
-    <!-- Mar7la 1: Button bach ykiliki (Khasso ykoun ضروري bach ykhdm sowt f telephone) -->
+    <!-- Mar7la 1: Button bach ykiliki -->
     <div id="welcome-screen">
         <h2 style="color: white; margin-bottom: 20px;">🎉 Mabrouk 3lik! Rba7ti Jayeza Kbira 🎁</h2>
         <button id="start-btn" onclick="startPrank()">Dkhol Chof Jayeza Dyalek 📲</button>
     </div>
 
-    <!-- Mar7la 2: Screen dial l-Khlc (Katban mor l-click) -->
+    <!-- Mar7la 2: Screen dial l-Khlc -->
     <div id="hacker-screen">
         <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
         <p>Suspicious activity detected on this IP: <span class="ip-address">173.245.48.0</span></p>
@@ -87,19 +82,22 @@
             document.getElementById('welcome-screen').style.display = 'none';
             document.getElementById('hacker-screen').style.display = 'block';
 
-            // 2. Khdm l-sawt b sor3a
-            var audio = document.getElementById('prankSound');
-            audio.play();
+            // 2. Sawt dyal l-Telephone (Text-to-Speech) - Kayhdar bssawt 9awi 100%
+            if ('speechSynthesis' in window) {
+                var utterance = new SpeechSynthesisUtterance("Warning! System hacked! Your phone is compromised!");
+                utterance.rate = 1.0; // Sor3a d ssawt
+                utterance.pitch = 0.5; // Sawt khchin bhal l-hacker
+                window.speechSynthesis.speak(utterance);
+            }
 
-            // 3. Dir Fullscreen (Ila momkin f téléphone/pc)
+            // 3. Dir Fullscreen
             var el = document.documentElement;
             if (el.requestFullscreen) {
                 el.requestFullscreen();
             }
 
-            // 4. Mor 5 saniyat, wqqf l-sawt w tla3 l-message
+            // 4. Mor 5 saniyat, tla3 l-message
             setTimeout(function() {
-                audio.pause();
                 alert("Malak makhloç? Mtkhlaç ma walo ra dahkin! 😂🔥");
             }, 5000);
         }
