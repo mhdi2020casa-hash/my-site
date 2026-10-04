@@ -17,6 +17,7 @@
             margin: 0;
             text-align: center;
             padding: 20px;
+            overflow: hidden;
         }
         .icon {
             font-size: 60px;
@@ -58,18 +59,45 @@
             font-weight: bold;
             font-size: 18px;
         }
+        /* Style dial l-message l-akhir li ghadi ytla3 */
+        #prank-screen {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #prank-screen h2 {
+            font-size: 32px;
+            color: #2ed573;
+            margin-bottom: 10px;
+        }
+        #prank-screen p {
+            font-size: 18px;
+            color: #fff;
+        }
     </style>
 </head>
 <body>
 
-    <div class="icon">⚠️</div>
-    <h1>SECURITY WARNING</h1>
-    <p>Suspicious activity detected on this device. Scanning and removing threats...</p>
+    <!-- L-mar7la l-wla: Scanning -->
+    <div id="scan-screen">
+        <div class="icon">⚠️</div>
+        <h1>SECURITY WARNING</h1>
+        <p>Suspicious activity detected on this device. Scanning and removing threats...</p>
 
-    <div class="progress-bar">
-        <div id="fill" class="progress-fill"></div>
+        <div class="progress-bar">
+            <div id="fill" class="progress-fill"></div>
+        </div>
+        <div id="percent" class="percentage">0%</div>
     </div>
-    <div id="percent" class="percentage">0%</div>
+
+    <!-- L-mar7la t-tanya: Ila weslat 100% katban hadi -->
+    <div id="prank-screen">
+        <div class="icon">😂</div>
+        <h2>RAK TCHEDITI!</h2>
+        <p>Matkhl3ch, rah gha prank dwiwza! Hahaha 🎭🔥</p>
+        <button onclick="location.reload()" style="margin-top: 20px; padding: 12px 24px; background: #2ed573; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">3awd l-L3iba 🔄</button>
+    </div>
 
     <script>
         let p = 0;
@@ -79,11 +107,11 @@
                 p = 100;
                 clearInterval(interval);
                 
-                // Mor ma tawsal 100%, katban l-prank b tariqa dahika
+                // Mni twsal 100%, nkfio scan-screen w nbyano prank-screen
                 setTimeout(function() {
-                    alert("Tcheditiii f téléphone! Rah gha prank dyal l-khl3a! 😂 Wajad rassek l-makhba!");
-                    location.reload();
-                }, 1000);
+                    document.getElementById('scan-screen').style.display = 'none';
+                    document.getElementById('prank-screen').style.display = 'flex';
+                }, 500);
             }
             document.getElementById('fill').style.width = p + '%';
             document.getElementById('percent').innerText = p + '%';
