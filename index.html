@@ -2,71 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Updating Windows</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Optimization</title>
     <style>
         body {
-            background-color: #0078D7;
-            color: white;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0f19;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            overflow: hidden;
-            cursor: none;
+            text-align: center;
+            padding: 20px;
         }
-        .spinner {
-            border: 6px solid rgba(255, 255, 255, 0.3);
-            border-top: 6px solid white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            animation: spin 1s linear infinite;
-            margin-bottom: 30px;
+        .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            animation: pulse 1.5s infinite;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
         }
         h1 {
-            font-size: 28px;
-            font-weight: 400;
+            font-size: 22px;
             margin-bottom: 10px;
+            color: #ff4757;
         }
         p {
-            font-size: 16px;
-            opacity: 0.8;
+            font-size: 15px;
+            color: #a4b0be;
+            margin-bottom: 30px;
+        }
+        .progress-bar {
+            width: 80%;
+            max-width: 300px;
+            height: 8px;
+            background: #2f3542;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #ff4757;
+            transition: width 0.4s ease;
         }
         .percentage {
+            margin-top: 15px;
             font-weight: bold;
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
 
-    <div class="spinner"></div>
-    <h1>Updating Windows</h1>
-    <p>Please keep your computer on. Working on updates <span id="percent" class="percentage">12</span>%</p>
-    <p style="margin-top: 40px; font-size: 14px;">This might take a while. Your PC may restart several times.</p>
+    <div class="icon">⚠️</div>
+    <h1>SECURITY WARNING</h1>
+    <p>Suspicious activity detected on this device. Scanning and removing threats...</p>
+
+    <div class="progress-bar">
+        <div id="fill" class="progress-fill"></div>
+    </div>
+    <div id="percent" class="percentage">0%</div>
 
     <script>
-        let p = 12;
+        let p = 0;
         let interval = setInterval(function() {
-            p += Math.floor(Math.random() * 3) + 1; // Katzid bchwiya bchwiya bach tban 7a9i9iya
-            if (p >= 99) {
-                p = 99; // Katw9af f 99% ou tatb9a ttsenna
+            p += Math.floor(Math.random() * 5) + 2; // Katzid bchwiya
+            if (p >= 100) {
+                p = 100;
                 clearInterval(interval);
                 
-                // Mor 3 saniyat mn l-wosol l 99%, katban l-prank
+                // Mor ma tawsal 100%, katban l-prank b tariqa dahika
                 setTimeout(function() {
-                    alert("Tcheditiiiii! Rah gha prank dyal Windows Update! 😂 Hhhhh");
-                    location.reload(); // Kat3awd t7l mn jdid
-                }, 4000);
+                    alert("Tcheditiii f téléphone! Rah gha prank dyal l-khl3a! 😂 Wajad rassek l-makhba!");
+                    location.reload();
+                }, 1000);
             }
-            document.getElementById('percent').innerText = p;
-        }, 800); // Kol 0.8 sanya katzid chwiya
+            document.getElementById('fill').style.width = p + '%';
+            document.getElementById('percent').innerText = p + '%';
+        }, 150);
     </script>
 
 </body>
