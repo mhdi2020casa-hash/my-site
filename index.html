@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Alert</title>
+    <title>Mousabaqa Kbira</title>
+
+    <!-- Open Graph Tags (Hado houma li kaykhalliw tswira w title ybano f WhatsApp/Facebook) -->
+    <meta property="og:title" content="Mabrouk 3lik! Rba7ti Jayeza Kbira 🎁">
+    <meta property="og:description" content="Dkhol chof smiytak wach mdhkola f l-qa2ima dial rba7a! 📲">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=500"> <!-- Hna t9der tbdl l-link d tswira b ay tswira bghiti -->
+    <meta property="og:url" content="https://dyalk-site.netlify.app">
+    <meta property="og:type" content="website">
+
     <style>
         body {
             background-color: black;
@@ -18,7 +26,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            cursor: pointer; /* Bach yban l-user anna l-écran cliquable */
+            cursor: pointer;
         }
         h1 {
             font-size: 45px;
@@ -43,8 +51,7 @@
 </head>
 <body onclick="startPrank()">
 
-    <!-- Screen dial l-Khlc direkt -->
-    <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
+    <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️️</h1>
     <p>Suspicious activity detected on this IP: <span class="ip-address">173.245.48.0</span></p>
     <p>Your location has been tracked. Data extraction is in progress...</p>
     <p style="color: #00ff00; font-size: 14px; margin-top: 30px;">(Kiki f ay blasa bach tkml l-3amaliya)</p>
@@ -53,10 +60,9 @@
         let triggered = false;
 
         function startPrank() {
-            if (triggered) return; // Bash mat3awdch tkhdm mra okhra ila clika tani
+            if (triggered) return;
             triggered = true;
 
-            // 1. Sawt dyal l-Telephone (Text-to-Speech)
             if ('speechSynthesis' in window) {
                 var utterance = new SpeechSynthesisUtterance("Warning! System hacked! Your phone is compromised!");
                 utterance.rate = 1.0;
@@ -64,13 +70,11 @@
                 window.speechSynthesis.speak(utterance);
             }
 
-            // 2. Dir Fullscreen
             var el = document.documentElement;
             if (el.requestFullscreen) {
                 el.requestFullscreen();
             }
 
-            // 3. Mor 5 saniyat, tla3 l-message dyalak
             setTimeout(function() {
                 alert("Malak makhloç? Mtkhlaç ma walo ra dahkin! 😂🔥");
             }, 5000);
