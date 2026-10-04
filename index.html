@@ -2,120 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Optimization</title>
+    <title>Security Alert</title>
     <style>
         body {
-            background-color: #0b0f19;
-            color: #ffffff;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+            background-color: black;
+            color: red;
+            font-family: 'Courier New', Courier, monospace;
             text-align: center;
-            padding: 20px;
+            padding-top: 20vh;
+            animation: flicker 0.15s infinite;
             overflow: hidden;
-        }
-        .icon {
-            font-size: 60px;
-            margin-bottom: 20px;
-            animation: pulse 1.5s infinite;
-        }
-        @keyframes pulse {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.1); opacity: 0.7; }
-            100% { transform: scale(1); opacity: 1; }
+            margin: 0;
+            cursor: none;
         }
         h1 {
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #ff4757;
+            font-size: 60px;
+            text-shadow: 0px 0px 20px red;
         }
         p {
-            font-size: 15px;
-            color: #a4b0be;
-            margin-bottom: 30px;
-        }
-        .progress-bar {
-            width: 80%;
-            max-width: 300px;
-            height: 8px;
-            background: #2f3542;
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-        }
-        .progress-fill {
-            height: 100%;
-            width: 0%;
-            background: #ff4757;
-            transition: width 0.4s ease;
-        }
-        .percentage {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        /* Style dial l-message l-akhir li ghadi ytla3 */
-        #prank-screen {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-        #prank-screen h2 {
-            font-size: 32px;
-            color: #2ed573;
-            margin-bottom: 10px;
-        }
-        #prank-screen p {
-            font-size: 18px;
+            font-size: 25px;
             color: #fff;
+            margin-top: 20px;
+        }
+        .ip-address {
+            color: yellow;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        /* Effect dial l-flicker bhal l-bula khassra */
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.8; }
+            100% { opacity: 1; }
         }
     </style>
 </head>
 <body>
 
-    <!-- L-mar7la l-wla: Scanning -->
-    <div id="scan-screen">
-        <div class="icon">⚠️</div>
-        <h1>SECURITY WARNING</h1>
-        <p>Suspicious activity detected on this device. Scanning and removing threats...</p>
-
-        <div class="progress-bar">
-            <div id="fill" class="progress-fill"></div>
-        </div>
-        <div id="percent" class="percentage">0%</div>
-    </div>
-
-    <!-- L-mar7la t-tanya: Ila weslat 100% katban hadi -->
-    <div id="prank-screen">
-        <div class="icon">😂</div>
-        <h2>RAK TCHEDITI!</h2>
-        <p>Matkhl3ch, rah gha prank dwiwza! Hahaha 🎭🔥</p>
-        <button onclick="location.reload()" style="margin-top: 20px; padding: 12px 24px; background: #2ed573; color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer;">3awd l-L3iba 🔄</button>
-    </div>
+    <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
+    <p>Suspicious activity detected on this IP: <span id="userip" class="ip-address">Loading IP...</span></p>
+    <p>Your location has been tracked. Data extraction is in progress...</p>
+    <p>Do not turn off your device. Your files are being encrypted.</p>
 
     <script>
-        let p = 0;
-        let interval = setInterval(function() {
-            p += Math.floor(Math.random() * 5) + 2; // Katzid bchwiya
-            if (p >= 100) {
-                p = 100;
-                clearInterval(interval);
-                
-                // Mni twsal 100%, nkfio scan-screen w nbyano prank-screen
-                setTimeout(function() {
-                    document.getElementById('scan-screen').style.display = 'none';
-                    document.getElementById('prank-screen').style.display = 'flex';
-                }, 500);
+        // 1. Daba gha n3iwdo IP dyal "192.168.1.XXX" b IP wa9ia, wla gha nkhliwha haka
+        // Bach yban 7a9i9i bzaf, t9der tkhlih Loading... wla tktb chi IP dial shabk mسب9an.
+        document.getElementById('userip').innerText = "173.245.48.0 (Approximate Location: Morocco)";
+
+        // 2. Mor 5 saniyat, ghadi n3ayto lihom b message dial l-prank
+        setTimeout(function() {
+            alert("Hahahaha! 😂 Tcheditiii! Rah gha prank dwiwza, matkhl3ch! Wajad rassek l-makhba!");
+            // T9der tzed l-code hada mor l-alert bach ykhli l-page t3awd t7l b sor3a:
+            // location.reload(); 
+        }, 5000);
+
+        // 3. (Optional) Fullscreen: Mni ykiliki f ay blasa, ytem chi f fullscreen
+        document.body.addEventListener('click', function() {
+            var el = document.documentElement;
+            if (el.requestFullscreen) {
+                el.requestFullscreen();
             }
-            document.getElementById('fill').style.width = p + '%';
-            document.getElementById('percent').innerText = p + '%';
-        }, 150);
+        }, { once: true }); // Katkhdm gha mra whda
     </script>
 
 </body>
