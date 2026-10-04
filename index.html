@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MEHDI  | براند طباعة </title>
+    <title>MEHDI DHR BRAND | براند طباعة الأنمي</title>
+    
+    <!-- Favicon (Logo dyal Tab f lfoq) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+
+    <!-- Open Graph (Bach ila sifti lsite f WhatsApp/Facebook yban l'logo w l'title w lwasf) -->
+    <meta property="og:title" content="MEHDI DHR BRAND | براند ملابس وطباعة الأنمي">
+    <meta property="og:description" content="تشكيلة تيشرتات أوفرسايز بأسلوب الجرافيك وطباعة الأنمي المميز. اطلب الآن!">
+    <meta property="og:type" content="website">
+
     <style>
         * {
             box-sizing: border-box;
@@ -194,7 +203,7 @@
 
     <!-- الصفحة الأولى: الترحيب -->
     <div id="welcome-page">
-        <h1 class="hero-title">MEHDI </h1>
+        <h1 class="hero-title">MEHDI</h1>
         <p class="hero-subtitle">براند ملابس وطباعة الأنمي الاحترافي</p>
         <button class="btn-enter" onclick="openBrand()">ENTER</button>
     </div>
@@ -223,7 +232,7 @@
                     <h3 class="product-title">تيشرت أسود - Gojo Satoru</h3>
                     <p class="product-desc">قصة واسعة مريحة (Oversize) مع طباعة جوجو ساتورو احترافية على الظهر.</p>
                     <div class="product-price">220 درهم</div>
-                    <button class="btn-order" onclick="commander('تيشرت جوجو ساتورو')">Demander</button>
+                    <button class="btn-order" onclick="commander('تيشرت جوجو ساتورو - 220 درهم')">Demander (WhatsApp)</button>
                 </div>
             </div>
 
@@ -245,7 +254,7 @@
                     <h3 class="product-title">تيشرت أسود - Sharingan Edition</h3>
                     <p class="product-desc">تصميم أنمي أوفرسايز مع طباعة عالية الجودة لشعار الشارينجان المميز.</p>
                     <div class="product-price">220 درهم</div>
-                    <button class="btn-order" onclick="commander('تيشرت شارينجان')">Demander</button>
+                    <button class="btn-order" onclick="commander('تيشرت شارينجان - 220 درهم')">Demander (WhatsApp)</button>
                 </div>
             </div>
 
@@ -263,7 +272,7 @@
                     <h3 class="product-title">تيشرت - Special Anime Edition</h3>
                     <p class="product-desc">تيشرت أوفرسايز أنيق مع طباعة أنمي ياباني خاصة.</p>
                     <div class="product-price">220 درهم</div>
-                    <button class="btn-order" onclick="commander('تيشرت إديسيون خاص')">Demander</button>
+                    <button class="btn-order" onclick="commander('تيشرت إديسيون خاص - 220 درهم')">Demander (WhatsApp)</button>
                 </div>
             </div>
 
@@ -277,7 +286,11 @@
         }
 
         function commander(productName) {
-            alert('شكراً لك! اخترت: ' + productName + '\nتواصل معنا عبر الوتساب للطلب!');
+            // Hot rqm dyalk hna b format dowli (mithal: 212600000000 boun +)
+            const phoneNumber = "212600000000"; 
+            const message = `Salam, bgit nchri ${productName} men MEHDI DHR BRAND.`;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
         }
     </script>
 </body>
