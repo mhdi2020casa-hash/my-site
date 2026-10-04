@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Alert</title>
     <style>
         body {
@@ -9,25 +10,50 @@
             color: red;
             font-family: 'Courier New', Courier, monospace;
             text-align: center;
-            padding-top: 20vh;
-            animation: flicker 0.15s infinite;
             overflow: hidden;
             margin: 0;
-            cursor: none;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* L-écran dial l-khl3a mkhalfi f l-bidaya */
+        #hacker-screen {
+            display: none;
         }
         h1 {
-            font-size: 60px;
+            font-size: 45px;
             text-shadow: 0px 0px 20px red;
+            animation: flicker 0.15s infinite;
         }
         p {
-            font-size: 25px;
+            font-size: 20px;
             color: #fff;
-            margin-top: 20px;
+            margin-top: 15px;
         }
         .ip-address {
             color: yellow;
             font-weight: bold;
-            font-size: 1.2em;
+        }
+        /* Style dial l-button lli kaykhalo ykiliki */
+        #start-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 0 20px red;
+            animation: pulse 1s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
         @keyframes flicker {
             0% { opacity: 1; }
@@ -38,41 +64,45 @@
 </head>
 <body>
 
-    <!-- Sawt (Audio) lli ghadi yakhdm automatic -->
+    <!-- Sawt (Audio) -->
     <audio id="prankSound" src="https://www.myinstants.com/media/sounds/warning-sound_1.mp3" preload="auto" loop></audio>
 
-    <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
-    <p>Suspicious activity detected on this IP: <span id="userip" class="ip-address">Loading IP...</span></p>
-    <p>Your location has been tracked. Data extraction is in progress...</p>
-    <p>Do not turn off your device. Your files are being encrypted.</p>
+    <!-- Mar7la 1: Button bach ykiliki (Khasso ykoun ضروري bach ykhdm sowt f telephone) -->
+    <div id="welcome-screen">
+        <h2 style="color: white; margin-bottom: 20px;">🎉 Mabrouk 3lik! Rba7ti Jayeza Kbira 🎁</h2>
+        <button id="start-btn" onclick="startPrank()">Dkhol Chof Jayeza Dyalek 📲</button>
+    </div>
+
+    <!-- Mar7la 2: Screen dial l-Khlc (Katban mor l-click) -->
+    <div id="hacker-screen">
+        <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
+        <p>Suspicious activity detected on this IP: <span class="ip-address">173.245.48.0</span></p>
+        <p>Your location has been tracked. Data extraction is in progress...</p>
+        <p>Do not turn off your device. Your files are being encrypted.</p>
+    </div>
 
     <script>
-        document.getElementById('userip').innerText = "173.245.48.0 (Approximate Location: Morocco)";
+        function startPrank() {
+            // 1. Khfi welcome screen w byan hacker screen
+            document.getElementById('welcome-screen').style.display = 'none';
+            document.getElementById('hacker-screen').style.display = 'block';
 
-        // Khdm l-sawt otomatik mni t7l l-page
-        window.addEventListener('load', function() {
+            // 2. Khdm l-sawt b sor3a
             var audio = document.getElementById('prankSound');
-            audio.play().catch(function(error) {
-                // Ila l-browser mn3 l-autoplay, ghadi ykhdm gha ykiliki f ay blasa
-                document.body.addEventListener('click', function() {
-                    audio.play();
-                }, { once: true });
-            });
-        });
+            audio.play();
 
-        // L-message l-jdid mor 5 saniyat
-        setTimeout(function() {
-            var audio = document.getElementById('prankSound');
-            audio.pause(); // Ywqqf l-sawt mni ytla3 l-message
-            alert("Malak makhloç? Mtkhlaç ma walo ra dahkin! 😂🔥");
-        }, 5000);
-
-        document.body.addEventListener('click', function() {
+            // 3. Dir Fullscreen (Ila momkin f téléphone/pc)
             var el = document.documentElement;
             if (el.requestFullscreen) {
                 el.requestFullscreen();
             }
-        }, { once: true });
+
+            // 4. Mor 5 saniyat, wqqf l-sawt w tla3 l-message
+            setTimeout(function() {
+                audio.pause();
+                alert("Malak makhloç? Mtkhlaç ma walo ra dahkin! 😂🔥");
+            }, 5000);
+        }
     </script>
 
 </body>
