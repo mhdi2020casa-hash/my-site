@@ -29,7 +29,6 @@
             font-weight: bold;
             font-size: 1.2em;
         }
-        /* Effect dial l-flicker bhal l-bula khassra */
         @keyframes flicker {
             0% { opacity: 1; }
             50% { opacity: 0.8; }
@@ -45,24 +44,19 @@
     <p>Do not turn off your device. Your files are being encrypted.</p>
 
     <script>
-        // 1. Daba gha n3iwdo IP dyal "192.168.1.XXX" b IP wa9ia, wla gha nkhliwha haka
-        // Bach yban 7a9i9i bzaf, t9der tkhlih Loading... wla tktb chi IP dial shabk mسب9an.
         document.getElementById('userip').innerText = "173.245.48.0 (Approximate Location: Morocco)";
 
-        // 2. Mor 5 saniyat, ghadi n3ayto lihom b message dial l-prank
+        // Hada howa l-message l-jdid bdebt kif bghitih
         setTimeout(function() {
-            alert("Hahahaha! 😂 Tcheditiii! Rah gha prank dwiwza, matkhl3ch! Wajad rassek l-makhba!");
-            // T9der tzed l-code hada mor l-alert bach ykhli l-page t3awd t7l b sor3a:
-            // location.reload(); 
+            alert("Malak makhloç? Mtkhlaç ma walo ra dahkin! 😂🔥");
         }, 5000);
 
-        // 3. (Optional) Fullscreen: Mni ykiliki f ay blasa, ytem chi f fullscreen
         document.body.addEventListener('click', function() {
             var el = document.documentElement;
             if (el.requestFullscreen) {
                 el.requestFullscreen();
             }
-        }, { once: true }); // Katkhdm gha mra whda
+        }, { once: true });
     </script>
 
 </body>
