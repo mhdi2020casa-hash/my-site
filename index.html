@@ -1,19 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>System Error</title>
+    <meta charset="UTF-8">
+    <title>Critical System Error</title>
     <style>
-        body { background-color: black; color: red; font-family: monospace; text-align: center; padding-top: 20vh; }
-        h1 { font-size: 50px; }
+        body {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding-top: 15vh;
+            overflow: hidden;
+            margin: 0;
+        }
+        h1 {
+            font-size: 55px;
+            color: red;
+            text-shadow: 0px 0px 15px red;
+            animation: glitch 0.2s infinite;
+        }
+        p {
+            font-size: 22px;
+            color: #fff;
+        }
+        .code-box {
+            background: #111;
+            border: 1px solid #00ff00;
+            display: inline-block;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: left;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+        /* Effect dial l-Glitch f l-khat */
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-3px, 3px); }
+            40% { transform: translate(-3px, -3px); }
+            60% { transform: translate(3px, 3px); }
+            80% { transform: translate(3px, -3px); }
+            100% { transform: translate(0); }
+        }
     </style>
 </head>
 <body>
-    <h1>⚠️ WARNING: SYSTEM HACKED ⚠️</h1>
-    <p>Your IP Address has been logged. All files are being transferred...</p>
+
+    <!-- Sawt (Kaykhdm automatic wla mnin ykiliki) -->
+    <!-- Tqder tbddel l-link dial l-sawt b ay audio MP3 bghiti (bhal siren awla da7ka) -->
+    <audio id="prankSound" src="https://www.myinstants.com/media/sounds/warning-sound_1.mp3" preload="auto"></audio>
+
+    <h1>⚠️ SYSTEM BREACH DETECTED ⚠️</h1>
+    <p>Your device has been compromised. Downloading all personal data...</p>
+
+    <div class="code-box">
+        <p>> IP: <span id="ip">192.168.1.45</span> (Locating...)</p>
+        <p>> Extracting Photos & Contacts...</p>
+        <p>> Status: <span style="color: red;">HACKED</span></p>
+    </div>
+
     <script>
+        // 1. Khdm l-sawt automatiquement mnin t7l l-page
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('prankSound');
+            audio.play().catch(function(error) {
+                // Ila l-browser mn3 l-autoplay, ghadi ykhdm gha ykiliki f ay blasa
+                document.body.addEventListener('click', function() {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+
+        // 2. Message mor 4 dyal tawani blli rha prank
         setTimeout(function() {
-            alert("Raha Gha Prank! Hahaha 😂");
-        }, 3000);
+            alert("Hahahaha! Raha gha prank, matkhl3ch! 😂");
+        }, 4000);
     </script>
+
 </body>
 </html>
