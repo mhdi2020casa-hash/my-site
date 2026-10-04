@@ -38,6 +38,9 @@
 </head>
 <body>
 
+    <!-- Sawt (Audio) lli ghadi yakhdm automatic -->
+    <audio id="prankSound" src="https://www.myinstants.com/media/sounds/warning-sound_1.mp3" preload="auto" loop></audio>
+
     <h1>⚠️ ATTENTION: SYSTEM COMPROMISED ⚠️</h1>
     <p>Suspicious activity detected on this IP: <span id="userip" class="ip-address">Loading IP...</span></p>
     <p>Your location has been tracked. Data extraction is in progress...</p>
@@ -46,8 +49,21 @@
     <script>
         document.getElementById('userip').innerText = "173.245.48.0 (Approximate Location: Morocco)";
 
-        // Hada howa l-message l-jdid bdebt kif bghitih
+        // Khdm l-sawt otomatik mni t7l l-page
+        window.addEventListener('load', function() {
+            var audio = document.getElementById('prankSound');
+            audio.play().catch(function(error) {
+                // Ila l-browser mn3 l-autoplay, ghadi ykhdm gha ykiliki f ay blasa
+                document.body.addEventListener('click', function() {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+
+        // L-message l-jdid mor 5 saniyat
         setTimeout(function() {
+            var audio = document.getElementById('prankSound');
+            audio.pause(); // Ywqqf l-sawt mni ytla3 l-message
             alert("Malak makhloç? Mtkhlaç ma walo ra dahkin! 😂🔥");
         }, 5000);
 
