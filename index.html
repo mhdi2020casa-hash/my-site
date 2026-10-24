@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AKATSUKI STREETWEAR | Hoodies Collection 👹</title>
 
-    <!-- Preview pour le partage sur les réseaux sociaux / WhatsApp -->
+    <!-- Social Media Link Preview Tags (Open Graph) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mhdi2020casa-hash.github.io/my-site/">
     <meta property="og:title" content="AKATSUKI STREETWEAR 👹 Hoodies Collection">
     <meta property="og:description" content="Afdal majmo3a d-qobiyat (Hoodies) Oversized w Ninja Style f l-Maghrib. Livraison partout au Maroc - Paiement à la livraison!">
-    <meta property="og:image" content="logo.png">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
 
+    <!-- Twitter Preview -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AKATSUKI STREETWEAR 👺 Hoodies Store">
     <meta name="twitter:description" content="Afdal majmo3a d-qobiyat Oversized Ninja Style f l-Maghrib.">
-    <meta name="twitter:image" content="logo.png">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -69,23 +70,28 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             text-decoration: none;
         }
 
-        .logo-img {
-            width: 45px;
-            height: 45px;
-            object-fit: contain;
-            border-radius: 50%;
+        .logo-svg {
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0 0 8px rgba(230, 57, 70, 0.8));
         }
 
         .logo-text {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: var(--accent);
             text-transform: uppercase;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         .cart-btn {
@@ -119,21 +125,21 @@
 
         .hero {
             text-align: center;
-            padding: 60px 20px 40px;
-            background: #101216;
+            padding: 70px 20px 50px;
+            background: linear-gradient(180deg, rgba(8, 9, 10, 0.85) 0%, var(--bg-main) 100%), 
+                        url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80') center/cover;
             border-bottom: 1px solid var(--border);
         }
 
-        .hero-logo-img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
+        .hero-logo-svg {
+            width: 110px;
+            height: 110px;
             margin-bottom: 15px;
-            filter: drop-shadow(0 0 15px rgba(230, 57, 70, 0.6));
+            filter: drop-shadow(0 0 20px rgba(230, 57, 70, 0.9));
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 44px;
             font-weight: 900;
             letter-spacing: 3px;
             margin-bottom: 15px;
@@ -511,7 +517,14 @@
 
     <header>
         <a href="#" class="logo-container">
-            <img src="logo.png" alt="AKATSUKI Logo" class="logo-img" onerror="this.style.display='none'">
+            <svg class="logo-svg" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="90" fill="#101216" stroke="#e63946" stroke-width="8"/>
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#e63946" stroke-width="3" stroke-dasharray="8 6"/>
+                <path d="M 40 100 Q 100 30 160 100 Q 100 170 40 100 Z" fill="#e63946" opacity="0.2"/>
+                <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#e63946" stroke-width="12" stroke-linecap="round"/>
+                <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#f1f3f5" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="100" cy="100" r="18" fill="#e63946" stroke="#f1f3f5" stroke-width="4"/>
+            </svg>
             <span class="logo-text">AKATSUKI</span>
         </a>
         <div class="header-actions">
@@ -523,7 +536,14 @@
     </header>
 
     <section class="hero">
-        <img src="logo.png" alt="AKATSUKI Logo" class="hero-logo-img" onerror="this.style.display='none'">
+        <svg class="hero-logo-svg" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="#101216" stroke="#e63946" stroke-width="8"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#e63946" stroke-width="3" stroke-dasharray="8 6"/>
+            <path d="M 40 100 Q 100 30 160 100 Q 100 170 40 100 Z" fill="#e63946" opacity="0.3"/>
+            <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#e63946" stroke-width="12" stroke-linecap="round"/>
+            <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="18" fill="#e63946" stroke="#ffffff" stroke-width="4"/>
+        </svg>
         <h1>AKATSUKI HOODIES</h1>
         <p>Afdal Matjar (Hoodies) Oversized, Anime, w Streetwear Style f l-Maghrib</p>
     </section>
@@ -586,8 +606,7 @@
     <script>
         const WHATSAPP_NUMBER = "212702418961";
 
-        /* Vous pouvez modifier les noms de fichiers ("hoodie1.jpg", etc.) 
-           selon les noms réels de vos images chargées sur GitHub. */
+        // Vos 6 articles originaux conservés intacts
         const products = [
             {
                 id: 1,
@@ -595,7 +614,7 @@
                 category: "oversized",
                 price: 299,
                 badge: "BESTSELLER",
-                image: "hoodie1.jpg"
+                image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 2,
@@ -603,7 +622,7 @@
                 category: "zip",
                 price: 350,
                 badge: "HOT",
-                image: "hoodie2.jpg"
+                image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 3,
@@ -611,7 +630,7 @@
                 category: "graphic",
                 price: 310,
                 badge: "NEW DROP",
-                image: "hoodie3.jpg"
+                image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 4,
@@ -619,7 +638,7 @@
                 category: "oversized",
                 price: 280,
                 badge: "ESSENTIAL",
-                image: "hoodie4.jpg"
+                image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 5,
@@ -627,7 +646,7 @@
                 category: "zip",
                 price: 360,
                 badge: "TECHWEAR",
-                image: "hoodie5.jpg"
+                image: "https://images.unsplash.com/photo-1513782192236-55a08322f772?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 6,
@@ -635,7 +654,7 @@
                 category: "graphic",
                 price: 320,
                 badge: "POPULAR",
-                image: "hoodie6.jpg"
+                image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80"
             }
         ];
 
@@ -665,7 +684,7 @@
                 <div class="product-card">
                     <div class="product-img-wrapper">
                         <span class="tag-badge">${p.badge}</span>
-                        <img src="${p.image}" alt="${p.title}" onerror="this.src='https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80'">
+                        <img src="${p.image}" alt="${p.title}">
                     </div>
                     <div class="product-details">
                         <div class="product-title">${p.title}</div>
