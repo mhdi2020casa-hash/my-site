@@ -3,25 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKATSUKI STREETWEAR | Hoodies Collection</title>
+    <title>AKATSUKI STREETWEAR | Hoodies Collection 👹</title>
+
+    <!-- Social Media Link Preview Tags (Open Graph) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mhdi2020casa-hash.github.io/my-site/">
+    <meta property="og:title" content="AKATSUKI STREETWEAR 👹 Hoodies Collection">
+    <meta property="og:description" content="Afdal majmo3a d-qobiyat (Hoodies) Oversized w Ninja Style f l-Maghrib. Livraison partout au Maroc - Paiement à la livraison!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
+
+    <!-- Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AKATSUKI STREETWEAR 👺 Hoodies Store">
+    <meta name="twitter:description" content="Afdal majmo3a d-qobiyat Oversized Ninja Style f l-Maghrib.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-main: #0a0b0e;
-            --bg-card: #12141a;
+            --bg-main: #08090a;
+            --bg-card: #101216;
             --accent: #e63946;
             --accent-hover: #c92a37;
             --text-main: #f1f3f5;
             --text-muted: #868e96;
-            --border: #1e222d;
+            --border: #1a1d24;
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
 
         body {
@@ -37,7 +50,7 @@
             padding: 9px 10px;
             font-size: 13px;
             font-weight: 800;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             text-transform: uppercase;
         }
 
@@ -45,45 +58,60 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 8%;
-            background: rgba(10, 11, 14, 0.98);
+            padding: 12px 8%;
+            background: rgba(8, 9, 10, 0.98);
             border-bottom: 2px solid var(--accent);
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             text-decoration: none;
         }
 
+        .logo-svg {
+            width: 48px;
+            height: 48px;
+            filter: drop-shadow(0 0 8px rgba(230, 57, 70, 0.8));
+        }
+
         .logo-text {
-            font-size: 24px;
+            font-size: 26px;
             font-weight: 900;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             color: var(--accent);
             text-transform: uppercase;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
 
         .cart-btn {
             background: var(--bg-card);
             border: 1px solid var(--border);
             color: var(--text-main);
-            padding: 10px 18px;
+            padding: 11px 20px;
             border-radius: 30px;
             cursor: pointer;
             font-weight: 700;
             display: flex;
             align-items: center;
             gap: 10px;
+            position: relative;
             transition: 0.3s;
         }
 
         .cart-btn:hover {
             border-color: var(--accent);
+            background: #15181e;
         }
 
         .cart-badge {
@@ -97,29 +125,41 @@
 
         .hero {
             text-align: center;
-            padding: 50px 20px 30px;
-            background: #12141a;
+            padding: 70px 20px 50px;
+            background: linear-gradient(180deg, rgba(8, 9, 10, 0.85) 0%, var(--bg-main) 100%), 
+                        url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80') center/cover;
             border-bottom: 1px solid var(--border);
         }
 
+        .hero-logo-svg {
+            width: 110px;
+            height: 110px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 0 20px rgba(230, 57, 70, 0.9));
+        }
+
         .hero h1 {
-            font-size: 38px;
+            font-size: 44px;
             font-weight: 900;
-            margin-bottom: 10px;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
             text-transform: uppercase;
             color: #fff;
         }
 
         .hero p {
             color: var(--text-muted);
-            font-size: 16px;
+            font-size: 18px;
+            max-width: 650px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
         .controls-container {
-            padding: 25px 8% 10px;
+            padding: 30px 8% 10px;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 20px;
         }
 
         .search-bar {
@@ -129,13 +169,19 @@
 
         .search-bar input {
             width: 100%;
-            padding: 14px 20px 14px 48px;
+            padding: 15px 20px 15px 50px;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 12px;
+            border-radius: 14px;
             color: #fff;
-            font-size: 15px;
+            font-size: 16px;
             outline: none;
+            transition: 0.3s;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--accent);
+            background: #15181e;
         }
 
         .search-bar i {
@@ -144,109 +190,119 @@
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-muted);
+            font-size: 18px;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .tab-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 11px 24px;
+            border-radius: 25px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
         }
 
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 28px;
-            padding: 25px 8% 60px;
+            gap: 30px;
+            padding: 30px 8% 70px;
         }
 
         .product-card {
             background: var(--bg-card);
             border: 1px solid var(--border);
-            border-radius: 18px;
+            border-radius: 20px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: 0.3s transform, 0.3s border-color;
+            transition: 0.3s transform, 0.3s border-color, 0.3s box-shadow;
         }
 
         .product-card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
             border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(230, 57, 70, 0.2);
         }
 
         .product-img-wrapper {
             position: relative;
             width: 100%;
-            height: 300px;
-            background: #1a1d26;
+            height: 330px;
+            background: #f4f4f6; /* Neutral background for clean hoodie mockups */
+            overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 15px;
         }
 
         .product-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: 0.5s transform;
+        }
+
+        .product-card:hover .product-img-wrapper img {
+            transform: scale(1.07);
         }
 
         .tag-badge {
             position: absolute;
-            top: 12px;
-            left: 12px;
+            top: 15px;
+            left: 15px;
             background: var(--accent);
             color: #fff;
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 5px 12px;
+            border-radius: 8px;
             font-size: 11px;
             font-weight: 800;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .product-details {
-            padding: 20px;
+            padding: 22px;
         }
 
         .product-title {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: #fff;
         }
 
         .product-price {
             color: var(--accent);
-            font-size: 21px;
+            font-size: 22px;
             font-weight: 900;
-            margin-bottom: 15px;
-        }
-
-        .option-label {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-bottom: 6px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-
-        .color-selector {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .color-dot {
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            cursor: pointer;
-            border: 2px solid transparent;
-            transition: 0.2s;
-        }
-
-        .color-dot.selected {
-            border-color: var(--accent);
-            transform: scale(1.15);
+            margin-bottom: 18px;
         }
 
         .size-selector {
             display: flex;
-            gap: 8px;
+            gap: 10px;
             margin-bottom: 18px;
         }
 
@@ -254,15 +310,16 @@
             background: var(--bg-main);
             border: 1px solid var(--border);
             color: var(--text-main);
-            width: 36px;
-            height: 36px;
+            width: 38px;
+            height: 38px;
             border-radius: 8px;
             cursor: pointer;
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 800;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: 0.2s;
         }
 
         .size-btn.selected, .size-btn:hover {
@@ -273,25 +330,27 @@
 
         .add-cart-btn {
             width: 100%;
-            padding: 13px;
+            padding: 14px;
             background: var(--accent);
             color: #fff;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             font-weight: 800;
             cursor: pointer;
             text-transform: uppercase;
+            letter-spacing: 1.2px;
+            transition: 0.2s;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
+            font-size: 15px;
         }
 
         .add-cart-btn:hover {
             background: var(--accent-hover);
         }
 
-        /* Cart Modal Drawer */
         .cart-overlay {
             display: none;
             position: fixed;
@@ -302,14 +361,15 @@
             background: rgba(0, 0, 0, 0.85);
             z-index: 1000;
             justify-content: flex-end;
+            backdrop-filter: blur(5px);
         }
 
         .cart-drawer {
             background: var(--bg-card);
             width: 100%;
-            max-width: 450px;
+            max-width: 480px;
             height: 100%;
-            padding: 25px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             overflow-y: auto;
@@ -320,52 +380,109 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 15px;
+            padding-bottom: 20px;
             border-bottom: 1px solid var(--border);
         }
 
+        .cart-header h2 {
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         .close-cart {
-            font-size: 28px;
+            font-size: 30px;
             cursor: pointer;
             color: var(--text-muted);
+            transition: 0.2s;
+        }
+
+        .close-cart:hover {
+            color: #fff;
         }
 
         .cart-items-list {
             flex-grow: 1;
-            margin: 20px 0;
+            margin: 25px 0;
         }
 
         .cart-item {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 0;
+            padding: 15px 0;
             border-bottom: 1px solid var(--border);
+        }
+
+        .cart-item-info h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .cart-item-info span {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .cart-item-price {
+            color: var(--accent);
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        .remove-icon {
+            color: #ff4757;
+            cursor: pointer;
+            margin-left: 18px;
+            font-size: 18px;
+            transition: 0.2s;
+        }
+
+        .remove-icon:hover {
+            color: #ff6b81;
+            transform: scale(1.1);
         }
 
         .checkout-box {
             border-top: 1px solid var(--border);
-            padding-top: 15px;
+            padding-top: 25px;
+            margin-top: auto;
+        }
+
+        .checkout-box h3 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            color: #fff;
         }
 
         .form-input {
             width: 100%;
-            padding: 10px 12px;
+            padding: 12px 16px;
             background: var(--bg-main);
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 10px;
             color: #fff;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             outline: none;
-            font-size: 14px;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        .form-input:focus {
+            border-color: var(--accent);
         }
 
         .cart-summary {
             display: flex;
             justify-content: space-between;
-            font-size: 18px;
-            font-weight: 800;
-            margin: 15px 0;
+            font-size: 20px;
+            font-weight: 900;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid var(--border);
         }
 
         .whatsapp-submit {
@@ -373,20 +490,23 @@
             background: #25D366;
             color: #fff;
             border: none;
-            padding: 14px;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: 800;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 900;
             cursor: pointer;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.2s;
         }
 
         .whatsapp-submit:hover {
             background: #1eb954;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -396,29 +516,53 @@
 
     <header>
         <a href="#" class="logo-container">
+            <svg class="logo-svg" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="90" fill="#101216" stroke="#e63946" stroke-width="8"/>
+                <circle cx="100" cy="100" r="70" fill="none" stroke="#e63946" stroke-width="3" stroke-dasharray="8 6"/>
+                <path d="M 40 100 Q 100 30 160 100 Q 100 170 40 100 Z" fill="#e63946" opacity="0.2"/>
+                <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#e63946" stroke-width="12" stroke-linecap="round"/>
+                <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#f1f3f5" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="100" cy="100" r="18" fill="#e63946" stroke="#f1f3f5" stroke-width="4"/>
+            </svg>
             <span class="logo-text">AKATSUKI</span>
         </a>
-        <button class="cart-btn" onclick="toggleCart()">
-            <i class="fas fa-shopping-bag"></i>
-            <span class="cart-badge" id="cart-count">0</span>
-        </button>
+        <div class="header-actions">
+            <button class="cart-btn" onclick="toggleCart()">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-badge" id="cart-count">0</span>
+            </button>
+        </div>
     </header>
 
     <section class="hero">
+        <svg class="hero-logo-svg" viewBox="0 0 200 200">
+            <circle cx="100" cy="100" r="90" fill="#101216" stroke="#e63946" stroke-width="8"/>
+            <circle cx="100" cy="100" r="70" fill="none" stroke="#e63946" stroke-width="3" stroke-dasharray="8 6"/>
+            <path d="M 40 100 Q 100 30 160 100 Q 100 170 40 100 Z" fill="#e63946" opacity="0.3"/>
+            <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#e63946" stroke-width="12" stroke-linecap="round"/>
+            <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="100" cy="100" r="18" fill="#e63946" stroke="#ffffff" stroke-width="4"/>
+        </svg>
         <h1>AKATSUKI HOODIES</h1>
-        <p>Collection Exclusive Oversized & Anime Streetwear Style</p>
+        <p>Afdal Majo3a d-Qobiyat (Hoodies) Oversized, Anime, w Streetwear Style f l-Maghrib</p>
     </section>
 
     <div class="controls-container">
         <div class="search-bar">
             <i class="fas fa-search"></i>
-            <input type="text" id="search-input" placeholder="Rechercher un produit..." oninput="filterProducts()">
+            <input type="text" id="search-input" placeholder="Bhath 3la hoodie, qobiya..." oninput="filterProducts()">
+        </div>
+        <div class="filter-tabs">
+            <button class="tab-btn active" onclick="filterCategory('all', this)">Kolchi</button>
+            <button class="tab-btn" onclick="filterCategory('oversized', this)">Oversized</button>
+            <button class="tab-btn" onclick="filterCategory('zip', this)">Zip Hoodies</button>
+            <button class="tab-btn" onclick="filterCategory('graphic', this)">Anime Graphic</button>
         </div>
     </div>
 
     <main class="products-grid" id="products-list"></main>
 
-    <!-- Cart Modal -->
+    <!-- Cart Drawer Modal -->
     <div class="cart-overlay" id="cart-modal">
         <div class="cart-drawer">
             <div class="cart-header">
@@ -428,12 +572,12 @@
 
             <div class="cart-items-list" id="cart-items"></div>
 
-            <div class="checkout-box">
-                <h3 style="margin-bottom: 10px; font-size: 15px;">Informations de livraison</h3>
-                <input type="text" id="cust-name" class="form-input" placeholder="Nom et Prénom" required>
-                <input type="tel" id="cust-phone" class="form-input" placeholder="Numéro de téléphone" required>
+            <div class="checkout-box checkout-form">
+                <h3>Informations d-Livraison</h3>
+                <input type="text" id="cust-name" class="form-input" placeholder="Smya w Knya" required>
+                <input type="tel" id="cust-phone" class="form-input" placeholder="Nemra d-Tilifoun (06/07...)" required>
                 <select id="cust-city" class="form-input">
-                    <option value="">Sélectionnez la ville</option>
+                    <option value="">Khtar l-Madina</option>
                     <option value="Casablanca">Casablanca</option>
                     <option value="Rabat">Rabat</option>
                     <option value="Marrakech">Marrakech</option>
@@ -442,9 +586,9 @@
                     <option value="Fes">Fès</option>
                     <option value="Meknes">Meknès</option>
                     <option value="Oujda">Oujda</option>
-                    <option value="Autre">Autre ville</option>
+                    <option value="Autre">Madina khora</option>
                 </select>
-                <input type="text" id="cust-address" class="form-input" placeholder="Adresse de livraison" required>
+                <input type="text" id="cust-address" class="form-input" placeholder="Adresse d-Livraison" required>
             </div>
 
             <div class="cart-summary">
@@ -453,7 +597,7 @@
             </div>
 
             <button class="whatsapp-submit" onclick="sendToWhatsApp()">
-                Commander via WhatsApp <i class="fab fa-whatsapp"></i>
+                Comondi direct f WhatsApp <i class="fab fa-whatsapp"></i>
             </button>
         </div>
     </div>
@@ -461,64 +605,61 @@
     <script>
         const WHATSAPP_NUMBER = "212702418961";
 
+        // Mockups d-Qobiyat (Hoodies) Flat Layout bhal Puma Design
         const products = [
             {
                 id: 1,
-                title: "Hoodie Oversized Akatsuki Cloud",
+                title: "Akatsuki Red Cloud Red Hoodie",
+                category: "oversized",
                 price: 299,
                 badge: "BESTSELLER",
-                colors: [
-                    { name: "Rouge", code: "#e63946", img: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" },
-                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" },
-                    { name: "Blanc", code: "#ffffff", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80" }
-                ]
+                image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 2,
-                title: "Hoodie Sukuna Shrine Edition",
+                title: "Sukuna Malevolent Shrine Black Hoodie",
+                category: "graphic",
                 price: 320,
-                badge: "NEW",
-                colors: [
-                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" },
-                    { name: "Gris", code: "#7f8c8d", img: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" }
-                ]
+                badge: "HOT",
+                image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 3,
-                title: "Hoodie Itachi Sharingan",
+                title: "Itachi Mangekyou Graphic Hoodie",
+                category: "graphic",
                 price: 310,
-                badge: "POPULAR",
-                colors: [
-                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" },
-                    { name: "Rouge", code: "#e63946", img: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" }
-                ]
+                badge: "NEW DROP",
+                image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 4,
-                title: "Hoodie Gojo Unlimited Void",
-                price: 330,
-                badge: "LIMITED",
-                colors: [
-                    { name: "Blanc", code: "#ffffff", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80" },
-                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" }
-                ]
+                title: "Gojo Unlimited Void White Hoodie",
+                category: "oversized",
+                price: 280,
+                badge: "ESSENTIAL",
+                image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 5,
+                title: "Full-Zip Tactical Heavyweight Hoodie",
+                category: "zip",
+                price: 360,
+                badge: "TECHWEAR",
+                image: "https://images.unsplash.com/photo-1513782192236-55a08322f772?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 6,
+                title: "Naruto Six Paths Sage Hoodie",
+                category: "graphic",
+                price: 320,
+                badge: "POPULAR",
+                image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80"
             }
         ];
 
         let selectedSizes = {};
-        let selectedColors = {};
         let cart = [];
-
-        function selectColor(productId, colorName, colorImg, dot) {
-            selectedColors[productId] = { name: colorName, img: colorImg };
-            const parent = dot.parentElement;
-            parent.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
-            dot.classList.add('selected');
-            
-            const card = dot.closest('.product-card');
-            const imgEl = card.querySelector('.product-img-wrapper img');
-            if (imgEl) imgEl.src = colorImg;
-        }
+        let currentCategory = 'all';
 
         function selectSize(productId, size, btn) {
             selectedSizes[productId] = size;
@@ -532,34 +673,22 @@
             if (!container) return;
 
             if (items.length === 0) {
-                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 40px 0;">Aucun produit trouvé.</p>';
+                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); font-size: 18px; padding: 40px 0;">Walou malkinch had l-montaj!</p>';
                 return;
             }
 
             container.innerHTML = items.map(p => {
                 const currentSize = selectedSizes[p.id] || 'L';
-                const currentColor = selectedColors[p.id] || p.colors[0];
-
                 return `
                 <div class="product-card">
                     <div class="product-img-wrapper">
                         <span class="tag-badge">${p.badge}</span>
-                        <img src="${currentColor.img}" alt="${p.title}">
+                        <img src="${p.image}" alt="${p.title}">
                     </div>
                     <div class="product-details">
                         <div class="product-title">${p.title}</div>
                         <div class="product-price">${p.price} DH</div>
                         
-                        <div class="option-label">Couleur:</div>
-                        <div class="color-selector">
-                            ${p.colors.map(c => `
-                                <div class="color-dot ${currentColor.name === c.name ? 'selected' : ''}" 
-                                     style="background-color: ${c.code};" 
-                                     onclick="selectColor(${p.id}, '${c.name}', '${c.img}', this)"></div>
-                            `).join('')}
-                        </div>
-
-                        <div class="option-label">Taille:</div>
                         <div class="size-selector">
                             <button class="size-btn ${currentSize === 'S' ? 'selected' : ''}" onclick="selectSize(${p.id}, 'S', this)">S</button>
                             <button class="size-btn ${currentSize === 'M' ? 'selected' : ''}" onclick="selectSize(${p.id}, 'M', this)">M</button>
@@ -568,25 +697,34 @@
                         </div>
 
                         <button class="add-cart-btn" onclick="addToCart(${p.id})">
-                            <i class="fas fa-shopping-bag"></i> Ajouter au Panier
+                            <i class="fas fa-shopping-bag"></i> Ajout Panier
                         </button>
                     </div>
                 </div>
             `}).join('');
         }
 
+        function filterCategory(cat, btn) {
+            currentCategory = cat;
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterProducts();
+        }
+
         function filterProducts() {
             const query = document.getElementById('search-input').value.toLowerCase().trim();
-            const filtered = products.filter(p => p.title.toLowerCase().includes(query));
+            const filtered = products.filter(p => {
+                const matchesCategory = currentCategory === 'all' || p.category === currentCategory;
+                const matchesSearch = p.title.toLowerCase().includes(query);
+                return matchesCategory && matchesSearch;
+            });
             displayProducts(filtered);
         }
 
         function addToCart(id) {
             const product = products.find(p => p.id === id);
             const size = selectedSizes[id] || 'L';
-            const color = selectedColors[id] ? selectedColors[id].name : product.colors[0].name;
-
-            cart.push({ ...product, selectedSize: size, selectedColor: color });
+            cart.push({ ...product, selectedSize: size });
             updateCartUI();
             toggleCart();
         }
@@ -601,17 +739,17 @@
             
             const cartItemsContainer = document.getElementById('cart-items');
             if (cart.length === 0) {
-                cartItemsContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 30px 0;">Votre panier est vide.</p>';
+                cartItemsContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 30px 0;">Sella ba9i khawya.</p>';
             } else {
                 cartItemsContainer.innerHTML = cart.map((p, index) => `
                     <div class="cart-item">
-                        <div>
-                            <h4 style="font-size: 14px;">${p.title}</h4>
-                            <span style="font-size: 12px; color: var(--text-muted);">Taille: <b>${p.selectedSize}</b> | Couleur: <b>${p.selectedColor}</b></span>
+                        <div class="cart-item-info">
+                            <h4>${p.title}</h4>
+                            <span>Taille: <b>${p.selectedSize}</b></span>
                         </div>
-                        <div style="display: flex; align-items: center; gap: 10px;">
-                            <span style="color: var(--accent); font-weight: bold;">${p.price} DH</span>
-                            <i class="fas fa-trash" style="color: #ff4757; cursor: pointer;" onclick="removeFromCart(${index})"></i>
+                        <div style="display: flex; align-items: center;">
+                            <span class="cart-item-price">${p.price} DH</span>
+                            <i class="fas fa-trash remove-icon" onclick="removeFromCart(${index})"></i>
                         </div>
                     </div>
                 `).join('');
@@ -628,7 +766,7 @@
 
         function sendToWhatsApp() {
             if (cart.length === 0) {
-                alert("Votre panier est vide !");
+                alert("Sella khawya!");
                 return;
             }
 
@@ -638,28 +776,27 @@
             const address = document.getElementById('cust-address').value.trim();
 
             if (!name || !phone || !city || !address) {
-                alert("Veuillez remplir toutes les informations de livraison.");
+                alert("3affak 3mmar ma3loumat d-livraison كاملا!");
                 return;
             }
 
-            let message = `*NOUVELLE COMMANDE - AKATSUKI HOODIES*\n\n`;
+            let message = `*NOUVELLE COMMANDE 👺 AKATSUKI HOODIES*\n\n`;
             message += `*Nom:* ${name}\n`;
             message += `*Téléphone:* ${phone}\n`;
             message += `*Ville:* ${city}\n`;
             message += `*Adresse:* ${address}\n\n`;
-            message += `*Articles:*\n`;
+            message += `*Articles:* (Paiement à la livraison)\n`;
 
             cart.forEach((p, i) => {
-                message += `${i + 1}. ${p.title} (${p.selectedColor}, Taille: ${p.selectedSize}) - ${p.price} DH\n`;
+                message += `${i + 1}. ${p.title} (Taille: ${p.selectedSize}) - ${p.price} DH\n`;
             });
 
             const total = cart.reduce((sum, p) => sum + p.price, 0);
-            message += `\n*TOTAL:* ${total} DH`;
+            message += `\n*TOTAL À PAYER:* ${total} DH`;
 
             window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
         }
 
-        // Affichage initial
         displayProducts(products);
     </script>
 </body>
