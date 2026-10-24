@@ -3,14 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKATSUKI STREETWEAR | Anime Hoodies Collection 👹</title>
-
-    <!-- Social Media Link Preview Tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mhdi2020casa-hash.github.io/my-site/">
-    <meta property="og:title" content="AKATSUKI STREETWEAR 👹 Anime Hoodies Store">
-    <meta property="og:description" content="Afdal majmo3a d-qobiyat Anime & Streetwear Style f l-Maghrib. Paiement à la livraison!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
+    <title>AKATSUKI STREETWEAR | Hoodies Collection</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -28,7 +21,7 @@
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
@@ -44,7 +37,7 @@
             padding: 9px 10px;
             font-size: 13px;
             font-weight: 800;
-            letter-spacing: 1.2px;
+            letter-spacing: 1px;
             text-transform: uppercase;
         }
 
@@ -52,13 +45,12 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 8%;
+            padding: 15px 8%;
             background: rgba(10, 11, 14, 0.98);
             border-bottom: 2px solid var(--accent);
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(10px);
         }
 
         .logo-container {
@@ -66,12 +58,6 @@
             align-items: center;
             gap: 12px;
             text-decoration: none;
-        }
-
-        .logo-svg {
-            width: 42px;
-            height: 42px;
-            filter: drop-shadow(0 0 8px rgba(230, 57, 70, 0.8));
         }
 
         .logo-text {
@@ -111,25 +97,22 @@
 
         .hero {
             text-align: center;
-            padding: 60px 20px 40px;
-            background: linear-gradient(180deg, rgba(10, 11, 14, 0.85) 0%, var(--bg-main) 100%), 
-                        url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80') center/cover;
+            padding: 50px 20px 30px;
+            background: #12141a;
             border-bottom: 1px solid var(--border);
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 38px;
             font-weight: 900;
-            letter-spacing: 2px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             text-transform: uppercase;
+            color: #fff;
         }
 
         .hero p {
             color: var(--text-muted);
-            font-size: 17px;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 16px;
         }
 
         .controls-container {
@@ -153,11 +136,6 @@
             color: #fff;
             font-size: 15px;
             outline: none;
-            transition: 0.3s;
-        }
-
-        .search-bar input:focus {
-            border-color: var(--accent);
         }
 
         .search-bar i {
@@ -168,34 +146,6 @@
             color: var(--text-muted);
         }
 
-        .filter-tabs {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding-bottom: 8px;
-        }
-
-        .tab-btn {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            color: var(--text-main);
-            padding: 10px 22px;
-            border-radius: 25px;
-            cursor: pointer;
-            white-space: nowrap;
-            font-size: 13px;
-            font-weight: 700;
-            transition: 0.3s;
-            text-transform: uppercase;
-        }
-
-        .tab-btn.active, .tab-btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #fff;
-        }
-
-        /* Products Grid */
         .products-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -222,23 +172,17 @@
         .product-img-wrapper {
             position: relative;
             width: 100%;
-            height: 320px;
-            background: #f8f9fa; /* Clean background for hoodie mockups */
+            height: 300px;
+            background: #1a1d26;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 15px;
         }
 
         .product-img-wrapper img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            transition: 0.4s transform;
-        }
-
-        .product-card:hover .product-img-wrapper img {
-            transform: scale(1.05);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .tag-badge {
@@ -272,7 +216,6 @@
             margin-bottom: 15px;
         }
 
-        /* Color Selector */
         .option-label {
             font-size: 12px;
             color: var(--text-muted);
@@ -301,7 +244,6 @@
             transform: scale(1.15);
         }
 
-        /* Size Selector */
         .size-selector {
             display: flex;
             gap: 8px;
@@ -321,7 +263,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: 0.2s;
         }
 
         .size-btn.selected, .size-btn:hover {
@@ -340,8 +281,6 @@
             font-weight: 800;
             cursor: pointer;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.2s;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -352,7 +291,7 @@
             background: var(--accent-hover);
         }
 
-        /* Cart Drawer */
+        /* Cart Modal Drawer */
         .cart-overlay {
             display: none;
             position: fixed;
@@ -363,15 +302,14 @@
             background: rgba(0, 0, 0, 0.85);
             z-index: 1000;
             justify-content: flex-end;
-            backdrop-filter: blur(5px);
         }
 
         .cart-drawer {
             background: var(--bg-card);
             width: 100%;
-            max-width: 460px;
+            max-width: 450px;
             height: 100%;
-            padding: 30px 25px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             overflow-y: auto;
@@ -382,7 +320,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-bottom: 18px;
+            padding-bottom: 15px;
             border-bottom: 1px solid var(--border);
         }
 
@@ -405,36 +343,14 @@
             border-bottom: 1px solid var(--border);
         }
 
-        .cart-item-info h4 {
-            font-size: 15px;
-            margin-bottom: 4px;
-            color: #fff;
-        }
-
-        .cart-item-info span {
-            color: var(--text-muted);
-            font-size: 13px;
-        }
-
-        .cart-item-price {
-            color: var(--accent);
-            font-weight: 800;
-        }
-
-        .remove-icon {
-            color: #ff4757;
-            cursor: pointer;
-            margin-left: 15px;
-        }
-
         .checkout-box {
             border-top: 1px solid var(--border);
-            padding-top: 20px;
+            padding-top: 15px;
         }
 
         .form-input {
             width: 100%;
-            padding: 12px 14px;
+            padding: 10px 12px;
             background: var(--bg-main);
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -449,7 +365,7 @@
             justify-content: space-between;
             font-size: 18px;
             font-weight: 800;
-            margin: 18px 0;
+            margin: 15px 0;
         }
 
         .whatsapp-submit {
@@ -457,7 +373,7 @@
             background: #25D366;
             color: #fff;
             border: none;
-            padding: 15px;
+            padding: 14px;
             border-radius: 10px;
             font-size: 16px;
             font-weight: 800;
@@ -476,4 +392,275 @@
 </head>
 <body>
 
-    <div class="top-bar">🔥
+    <div class="top-bar">🔥 LIVRAISON PARTOUT AU MAROC - PAIEMENT À LA LIVRAISON 🔥</div>
+
+    <header>
+        <a href="#" class="logo-container">
+            <span class="logo-text">AKATSUKI</span>
+        </a>
+        <button class="cart-btn" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-badge" id="cart-count">0</span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <h1>AKATSUKI HOODIES</h1>
+        <p>Collection Exclusive Oversized & Anime Streetwear Style</p>
+    </section>
+
+    <div class="controls-container">
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" id="search-input" placeholder="Rechercher un produit..." oninput="filterProducts()">
+        </div>
+    </div>
+
+    <main class="products-grid" id="products-list"></main>
+
+    <!-- Cart Modal -->
+    <div class="cart-overlay" id="cart-modal">
+        <div class="cart-drawer">
+            <div class="cart-header">
+                <h2>Mon Panier</h2>
+                <span class="close-cart" onclick="toggleCart()">&times;</span>
+            </div>
+
+            <div class="cart-items-list" id="cart-items"></div>
+
+            <div class="checkout-box">
+                <h3 style="margin-bottom: 10px; font-size: 15px;">Informations de livraison</h3>
+                <input type="text" id="cust-name" class="form-input" placeholder="Nom et Prénom" required>
+                <input type="tel" id="cust-phone" class="form-input" placeholder="Numéro de téléphone" required>
+                <select id="cust-city" class="form-input">
+                    <option value="">Sélectionnez la ville</option>
+                    <option value="Casablanca">Casablanca</option>
+                    <option value="Rabat">Rabat</option>
+                    <option value="Marrakech">Marrakech</option>
+                    <option value="Tanger">Tanger</option>
+                    <option value="Agadir">Agadir</option>
+                    <option value="Fes">Fès</option>
+                    <option value="Meknes">Meknès</option>
+                    <option value="Oujda">Oujda</option>
+                    <option value="Autre">Autre ville</option>
+                </select>
+                <input type="text" id="cust-address" class="form-input" placeholder="Adresse de livraison" required>
+            </div>
+
+            <div class="cart-summary">
+                <span>Total:</span>
+                <span id="total-price">0 DH</span>
+            </div>
+
+            <button class="whatsapp-submit" onclick="sendToWhatsApp()">
+                Commander via WhatsApp <i class="fab fa-whatsapp"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const WHATSAPP_NUMBER = "212702418961";
+
+        const products = [
+            {
+                id: 1,
+                title: "Hoodie Oversized Akatsuki Cloud",
+                price: 299,
+                badge: "BESTSELLER",
+                colors: [
+                    { name: "Rouge", code: "#e63946", img: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" },
+                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" },
+                    { name: "Blanc", code: "#ffffff", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80" }
+                ]
+            },
+            {
+                id: 2,
+                title: "Hoodie Sukuna Shrine Edition",
+                price: 320,
+                badge: "NEW",
+                colors: [
+                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" },
+                    { name: "Gris", code: "#7f8c8d", img: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" }
+                ]
+            },
+            {
+                id: 3,
+                title: "Hoodie Itachi Sharingan",
+                price: 310,
+                badge: "POPULAR",
+                colors: [
+                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" },
+                    { name: "Rouge", code: "#e63946", img: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" }
+                ]
+            },
+            {
+                id: 4,
+                title: "Hoodie Gojo Unlimited Void",
+                price: 330,
+                badge: "LIMITED",
+                colors: [
+                    { name: "Blanc", code: "#ffffff", img: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80" },
+                    { name: "Noir", code: "#111111", img: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" }
+                ]
+            }
+        ];
+
+        let selectedSizes = {};
+        let selectedColors = {};
+        let cart = [];
+
+        function selectColor(productId, colorName, colorImg, dot) {
+            selectedColors[productId] = { name: colorName, img: colorImg };
+            const parent = dot.parentElement;
+            parent.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
+            dot.classList.add('selected');
+            
+            const card = dot.closest('.product-card');
+            const imgEl = card.querySelector('.product-img-wrapper img');
+            if (imgEl) imgEl.src = colorImg;
+        }
+
+        function selectSize(productId, size, btn) {
+            selectedSizes[productId] = size;
+            const parent = btn.parentElement;
+            parent.querySelectorAll('.size-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+        }
+
+        function displayProducts(items) {
+            const container = document.getElementById('products-list');
+            if (!container) return;
+
+            if (items.length === 0) {
+                container.innerHTML = '<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted); padding: 40px 0;">Aucun produit trouvé.</p>';
+                return;
+            }
+
+            container.innerHTML = items.map(p => {
+                const currentSize = selectedSizes[p.id] || 'L';
+                const currentColor = selectedColors[p.id] || p.colors[0];
+
+                return `
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <span class="tag-badge">${p.badge}</span>
+                        <img src="${currentColor.img}" alt="${p.title}">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-title">${p.title}</div>
+                        <div class="product-price">${p.price} DH</div>
+                        
+                        <div class="option-label">Couleur:</div>
+                        <div class="color-selector">
+                            ${p.colors.map(c => `
+                                <div class="color-dot ${currentColor.name === c.name ? 'selected' : ''}" 
+                                     style="background-color: ${c.code};" 
+                                     onclick="selectColor(${p.id}, '${c.name}', '${c.img}', this)"></div>
+                            `).join('')}
+                        </div>
+
+                        <div class="option-label">Taille:</div>
+                        <div class="size-selector">
+                            <button class="size-btn ${currentSize === 'S' ? 'selected' : ''}" onclick="selectSize(${p.id}, 'S', this)">S</button>
+                            <button class="size-btn ${currentSize === 'M' ? 'selected' : ''}" onclick="selectSize(${p.id}, 'M', this)">M</button>
+                            <button class="size-btn ${currentSize === 'L' ? 'selected' : ''}" onclick="selectSize(${p.id}, 'L', this)">L</button>
+                            <button class="size-btn ${currentSize === 'XL' ? 'selected' : ''}" onclick="selectSize(${p.id}, 'XL', this)">XL</button>
+                        </div>
+
+                        <button class="add-cart-btn" onclick="addToCart(${p.id})">
+                            <i class="fas fa-shopping-bag"></i> Ajouter au Panier
+                        </button>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        function filterProducts() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const filtered = products.filter(p => p.title.toLowerCase().includes(query));
+            displayProducts(filtered);
+        }
+
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            const size = selectedSizes[id] || 'L';
+            const color = selectedColors[id] ? selectedColors[id].name : product.colors[0].name;
+
+            cart.push({ ...product, selectedSize: size, selectedColor: color });
+            updateCartUI();
+            toggleCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+            
+            const cartItemsContainer = document.getElementById('cart-items');
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p style="color: var(--text-muted); text-align: center; padding: 30px 0;">Votre panier est vide.</p>';
+            } else {
+                cartItemsContainer.innerHTML = cart.map((p, index) => `
+                    <div class="cart-item">
+                        <div>
+                            <h4 style="font-size: 14px;">${p.title}</h4>
+                            <span style="font-size: 12px; color: var(--text-muted);">Taille: <b>${p.selectedSize}</b> | Couleur: <b>${p.selectedColor}</b></span>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <span style="color: var(--accent); font-weight: bold;">${p.price} DH</span>
+                            <i class="fas fa-trash" style="color: #ff4757; cursor: pointer;" onclick="removeFromCart(${index})"></i>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            const total = cart.reduce((sum, p) => sum + p.price, 0);
+            document.getElementById('total-price').innerText = total + " DH";
+        }
+
+        function toggleCart() {
+            const modal = document.getElementById('cart-modal');
+            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function sendToWhatsApp() {
+            if (cart.length === 0) {
+                alert("Votre panier est vide !");
+                return;
+            }
+
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const city = document.getElementById('cust-city').value;
+            const address = document.getElementById('cust-address').value.trim();
+
+            if (!name || !phone || !city || !address) {
+                alert("Veuillez remplir toutes les informations de livraison.");
+                return;
+            }
+
+            let message = `*NOUVELLE COMMANDE - AKATSUKI HOODIES*\n\n`;
+            message += `*Nom:* ${name}\n`;
+            message += `*Téléphone:* ${phone}\n`;
+            message += `*Ville:* ${city}\n`;
+            message += `*Adresse:* ${address}\n\n`;
+            message += `*Articles:*\n`;
+
+            cart.forEach((p, i) => {
+                message += `${i + 1}. ${p.title} (${p.selectedColor}, Taille: ${p.selectedSize}) - ${p.price} DH\n`;
+            });
+
+            const total = cart.reduce((sum, p) => sum + p.price, 0);
+            message += `\n*TOTAL:* ${total} DH`;
+
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        // Affichage initial
+        displayProducts(products);
+    </script>
+</body>
+</html>
