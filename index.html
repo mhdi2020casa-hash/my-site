@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AKATSUKI STREETWEAR | Official Store 👹</title>
+    <title>AKATSUKI STREETWEAR | Hoodies Collection 👹</title>
 
     <!-- Social Media Link Preview Tags (Open Graph) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mhdi2020casa-hash.github.io/my-site/">
-    <meta property="og:title" content="AKATSUKI STREETWEAR 👹 Katana Collection">
-    <meta property="og:description" content="Afdal majmo3a d-hwayej Oversized w Ninja Style f l-Maghrib. Livraison partout au Maroc - Paiement à la livraison!">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80">
+    <meta property="og:title" content="AKATSUKI STREETWEAR 👹 Hoodies Collection">
+    <meta property="og:description" content="Afdal majmo3a d-qobiyat (Hoodies) Oversized w Ninja Style f l-Maghrib. Livraison partout au Maroc - Paiement à la livraison!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
 
     <!-- Twitter Preview -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AKATSUKI STREETWEAR 👺 Official Store">
-    <meta name="twitter:description" content="Afdal majmo3a d-hwayej Oversized Ninja Style f l-Maghrib.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=1200&q=80">
+    <meta name="twitter:title" content="AKATSUKI STREETWEAR 👺 Hoodies Store">
+    <meta name="twitter:description" content="Afdal majmo3a d-qobiyat Oversized Ninja Style f l-Maghrib.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -74,7 +74,6 @@
             text-decoration: none;
         }
 
-        /* Vector Badge Logo SVG */
         .logo-svg {
             width: 48px;
             height: 48px;
@@ -128,7 +127,7 @@
             text-align: center;
             padding: 70px 20px 50px;
             background: linear-gradient(180deg, rgba(8, 9, 10, 0.85) 0%, var(--bg-main) 100%), 
-                        url('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1200&q=80') center/cover;
+                        url('https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80') center/cover;
             border-bottom: 1px solid var(--border);
         }
 
@@ -540,20 +539,20 @@
             <path d="M 45 155 L 155 45 M 45 45 L 155 155" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
             <circle cx="100" cy="100" r="18" fill="#e63946" stroke="#ffffff" stroke-width="4"/>
         </svg>
-        <h1>AKATSUKI STREETWEAR</h1>
-        <p>Afdal Majo3a d-Hwayej Oversized, Ninja Katana Style, w Anime Streetwear f l-Maghrib</p>
+        <h1>AKATSUKI HOODIES</h1>
+        <p>Afdal Majo3a d-Qobiyat (Hoodies) Oversized, Anime, w Streetwear Style f l-Maghrib</p>
     </section>
 
     <div class="controls-container">
         <div class="search-bar">
             <i class="fas fa-search"></i>
-            <input type="text" id="search-input" placeholder="Bhath 3la hoodie, t-shirt, pantalon..." oninput="filterProducts()">
+            <input type="text" id="search-input" placeholder="Bhath 3la hoodie, qobiya..." oninput="filterProducts()">
         </div>
         <div class="filter-tabs">
             <button class="tab-btn active" onclick="filterCategory('all', this)">Kolchi</button>
-            <button class="tab-btn" onclick="filterCategory('hoodies', this)">Hoodies</button>
-            <button class="tab-btn" onclick="filterCategory('tshirts', this)">T-Shirts</button>
-            <button class="tab-btn" onclick="filterCategory('pants', this)">Pantalons</button>
+            <button class="tab-btn" onclick="filterCategory('oversized', this)">Oversized</button>
+            <button class="tab-btn" onclick="filterCategory('zip', this)">Zip Hoodies</button>
+            <button class="tab-btn" onclick="filterCategory('graphic', this)">Anime Graphic</button>
         </div>
     </div>
 
@@ -602,54 +601,55 @@
     <script>
         const WHATSAPP_NUMBER = "212702418961";
 
+        // Liste 100% Hoodies / Qobiyat
         const products = [
             {
                 id: 1,
-                title: "Oversized Hoodie Katana Red Cloud",
-                category: "hoodies",
+                title: "Oversized Hoodie Itachi Red Cloud",
+                category: "oversized",
                 price: 299,
-                badge: "PREMIUM",
+                badge: "BESTSELLER",
                 image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 2,
-                title: "T-Shirt Graphic Sukuna Cursed",
-                category: "tshirts",
-                price: 180,
-                badge: "NEW DROP",
-                image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 3,
-                title: "Cargo Pants Black Ninja Techwear",
-                category: "pants",
-                price: 320,
-                badge: "TRENDING",
-                image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                id: 4,
-                title: "Hoodie Zip Heavyweight Shinobi",
-                category: "hoodies",
+                title: "Zip Hoodie Heavyweight Dark Shinobi",
+                category: "zip",
                 price: 350,
-                badge: "LIMITED",
+                badge: "HOT",
                 image: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80"
             },
             {
+                id: 3,
+                title: "Graphic Anime Hoodie Sukuna Domain",
+                category: "graphic",
+                price: 310,
+                badge: "NEW DROP",
+                image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: 4,
+                title: "Oversized Minimalist Black Hoodie",
+                category: "oversized",
+                price: 280,
+                badge: "ESSENTIAL",
+                image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+            },
+            {
                 id: 5,
-                title: "T-Shirt Oversized Gojo Unlimited",
-                category: "tshirts",
-                price: 190,
-                badge: "ANIME HIGH",
-                image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=600&q=80"
+                title: "Full-Zip Tactical Hoodie Techwear",
+                category: "zip",
+                price: 360,
+                badge: "TECHWEAR",
+                image: "https://images.unsplash.com/photo-1513782192236-55a08322f772?auto=format&fit=crop&w=600&q=80"
             },
             {
                 id: 6,
-                title: "Tracksuit Pants Oversized Fit Ninja",
-                category: "pants",
-                price: 280,
+                title: "Graphic Anime Hoodie Gojo Eyes",
+                category: "graphic",
+                price: 320,
                 badge: "POPULAR",
-                image: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80"
+                image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80"
             }
         ];
 
@@ -776,7 +776,7 @@
                 return;
             }
 
-            let message = `*NOUVELLE COMMANDE 👺 AKATSUKI STREETWEAR*\n\n`;
+            let message = `*NOUVELLE COMMANDE 👺 AKATSUKI HOODIES*\n\n`;
             message += `*Nom:* ${name}\n`;
             message += `*Téléphone:* ${phone}\n`;
             message += `*Ville:* ${city}\n`;
