@@ -6,15 +6,6 @@
     <title>AKATSUKI STREETWEAR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --bg-color: #0b0b0d;
-            --card-bg: #16161a;
-            --accent-color: #e63946;
-            --text-color: #f1f1f1;
-            --text-muted: #a0a0a0;
-            --border-color: #2a2a30;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -23,8 +14,8 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: #121214;
+            color: #ffffff;
             min-height: 100vh;
         }
 
@@ -34,19 +25,18 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px 8%;
-            background: rgba(11, 11, 13, 0.95);
-            border-bottom: 1px solid var(--border-color);
+            background: #1a1a1e;
+            border-bottom: 2px solid #e63946;
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(10px);
         }
 
         .logo {
             font-size: 26px;
             font-weight: 900;
-            letter-spacing: 3px;
-            color: var(--accent-color);
+            letter-spacing: 2px;
+            color: #e63946;
             text-transform: uppercase;
         }
 
@@ -54,11 +44,11 @@
             font-size: 22px;
             cursor: pointer;
             position: relative;
-            color: var(--text-color);
+            color: #fff;
         }
 
         #cart-count {
-            background: var(--accent-color);
+            background: #e63946;
             color: white;
             border-radius: 50%;
             padding: 2px 7px;
@@ -72,31 +62,31 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 70px 20px;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200') center/cover;
-            border-bottom: 1px solid var(--border-color);
+            padding: 50px 20px;
+            background: #1a1a1e;
+            border-bottom: 1px solid #2a2a30;
         }
 
         .hero h1 {
-            font-size: 40px;
+            font-size: 36px;
             margin-bottom: 10px;
+            color: #fff;
             text-transform: uppercase;
-            letter-spacing: 2px;
         }
 
         .hero p {
-            color: var(--text-muted);
-            font-size: 17px;
+            color: #a0a0a0;
+            font-size: 16px;
         }
 
-        /* Controls */
+        /* Search & Filters */
         .controls {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             gap: 15px;
-            padding: 30px 8% 10px;
+            padding: 25px 8% 10px;
         }
 
         .search-box {
@@ -108,10 +98,10 @@
         .search-box input {
             width: 100%;
             padding: 12px 15px 12px 40px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background: #1a1a1e;
+            border: 1px solid #333;
             border-radius: 8px;
-            color: var(--text-color);
+            color: #fff;
             outline: none;
             font-size: 15px;
         }
@@ -121,20 +111,19 @@
             left: 15px;
             top: 50%;
             transform: translateY(-50%);
-            color: var(--text-muted);
+            color: #a0a0a0;
         }
 
         .category-filters {
             display: flex;
             gap: 10px;
             overflow-x: auto;
-            padding-bottom: 5px;
         }
 
         .filter-btn {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
+            background: #1a1a1e;
+            border: 1px solid #333;
+            color: #fff;
             padding: 8px 18px;
             border-radius: 20px;
             cursor: pointer;
@@ -144,53 +133,88 @@
         }
 
         .filter-btn.active, .filter-btn:hover {
-            background: var(--accent-color);
-            border-color: var(--accent-color);
+            background: #e63946;
+            border-color: #e63946;
         }
 
         /* Products Grid */
         .products-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
             padding: 30px 8% 60px;
         }
 
         .product-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background: #1a1a1e;
+            border: 1px solid #2a2a30;
             border-radius: 12px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.2s, border-color 0.2s;
         }
 
         .product-card:hover {
             transform: translateY(-5px);
-            border-color: var(--accent-color);
+            border-color: #e63946;
         }
 
         .product-card img {
             width: 100%;
-            height: 300px;
+            height: 280px;
             object-fit: cover;
-            background: #222;
+            background: #25252b;
         }
 
         .product-info {
-            padding: 20px;
+            padding: 15px;
         }
 
         .product-title {
-            font-size: 17px;
+            font-size: 16px;
             font-weight: bold;
             margin-bottom: 8px;
+            color: #fff;
         }
 
         .product-price {
-            color: var(--accent-color);
+            color: #e63946;
             font-weight: bold;
-            font-size: 19px;
-            margin-bottom: 15px;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            padding: 10px;
+            background: #e63946;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .add-to-cart:hover {
+            background: #c02633;
+        }
+
+        /* Cart Modal Drawer */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: flex-end;
+            z-index: 1000;
+        }
+
+        .cart-content {
+            background: #1a1a1e;
+            width:
