@@ -6,215 +6,51 @@
     <title>AKATSUKI STREETWEAR</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #121214; color: #fff; padding-bottom: 50px; }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: #1a1a1e; border-bottom: 2px solid #e63946; }
+        .logo { font-size: 24px; font-weight: bold; color: #e63946; }
+        .hero { text-align: center; padding: 40px 20px; background: #1a1a1e; margin-bottom: 30px; }
+        .hero h1 { font-size: 32px; margin-bottom: 10px; }
+        .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 8%; }
+        .card { background: #1a1a1e; border: 1px solid #333; border-radius: 8px; overflow: hidden; padding: 15px; text-align: center; }
+        .card img { width: 100%; height: 250px; object-fit: cover; border-radius: 6px; }
+        .card h3 { margin: 15px 0 10px; font-size: 18px; }
+        .card p { color: #e63946; font-weight: bold; font-size: 18px; margin-bottom: 15px; }
+        .btn { background: #25D366; color: #fff; text-decoration: none; padding: 10px 15px; border-radius: 5px; display: inline-block; font-weight: bold; }
+    </style>
+</head>
+<body>
 
-        body {
-            background-color: #121214;
-            color: #ffffff;
-            min-height: 100vh;
-        }
+    <header>
+        <div class="logo">AKATSUKI STREETWEAR</div>
+    </header>
 
-        /* Header */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 8%;
-            background: #1a1a1e;
-            border-bottom: 2px solid #e63946;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+    <section class="hero">
+        <h1>Bienvenue chez AKATSUKI</h1>
+        <p>Commandez vos vêtements directement sur WhatsApp</p>
+    </section>
 
-        .logo {
-            font-size: 26px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #e63946;
-            text-transform: uppercase;
-        }
+    <main class="products">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500" alt="Hoodie">
+            <h3>Oversized Hoodie Itachi</h3>
+            <p>299 DH</p>
+            <a href="https://wa.me/212600000000?text=Je%20veux%20commander%20Oversized%20Hoodie%20Itachi" class="btn" target="_blank">Commander via WhatsApp</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="T-Shirt">
+            <h3>T-Shirt Graphic Sukuna</h3>
+            <p>180 DH</p>
+            <a href="https://wa.me/212600000000?text=Je%20veux%20commander%20T-Shirt%20Sukuna" class="btn" target="_blank">Commander via WhatsApp</a>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=500" alt="Pantalon">
+            <h3>Cargo Pants Black</h3>
+            <p>320 DH</p>
+            <a href="https://wa.me/212600000000?text=Je%20veux%20commander%20Cargo%20Pants%20Black" class="btn" target="_blank">Commander via WhatsApp</a>
+        </div>
+    </main>
 
-        .cart-icon {
-            font-size: 22px;
-            cursor: pointer;
-            position: relative;
-            color: #fff;
-        }
-
-        #cart-count {
-            background: #e63946;
-            color: white;
-            border-radius: 50%;
-            padding: 2px 7px;
-            font-size: 12px;
-            position: absolute;
-            top: -8px;
-            right: -12px;
-            font-weight: bold;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-            background: #1a1a1e;
-            border-bottom: 1px solid #2a2a30;
-        }
-
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            color: #fff;
-            text-transform: uppercase;
-        }
-
-        .hero p {
-            color: #a0a0a0;
-            font-size: 16px;
-        }
-
-        /* Search & Filters */
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            padding: 25px 8% 10px;
-        }
-
-        .search-box {
-            position: relative;
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 15px 12px 40px;
-            background: #1a1a1e;
-            border: 1px solid #333;
-            border-radius: 8px;
-            color: #fff;
-            outline: none;
-            font-size: 15px;
-        }
-
-        .search-box i {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #a0a0a0;
-        }
-
-        .category-filters {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-        }
-
-        .filter-btn {
-            background: #1a1a1e;
-            border: 1px solid #333;
-            color: #fff;
-            padding: 8px 18px;
-            border-radius: 20px;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: 0.3s;
-            font-weight: 600;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: #e63946;
-            border-color: #e63946;
-        }
-
-        /* Products Grid */
-        .products-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 25px;
-            padding: 30px 8% 60px;
-        }
-
-        .product-card {
-            background: #1a1a1e;
-            border: 1px solid #2a2a30;
-            border-radius: 12px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s, border-color 0.2s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            border-color: #e63946;
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            background: #25252b;
-        }
-
-        .product-info {
-            padding: 15px;
-        }
-
-        .product-title {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        .product-price {
-            color: #e63946;
-            font-weight: bold;
-            font-size: 18px;
-            margin-bottom: 12px;
-        }
-
-        .add-to-cart {
-            width: 100%;
-            padding: 10px;
-            background: #e63946;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-
-        .add-to-cart:hover {
-            background: #c02633;
-        }
-
-        /* Cart Modal Drawer */
-        .cart-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: flex-end;
-            z-index: 1000;
-        }
-
-        .cart-content {
-            background: #1a1a1e;
-            width:
+</body>
+</html>
