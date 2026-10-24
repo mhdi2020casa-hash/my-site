@@ -28,6 +28,7 @@
             min-height: 100vh;
         }
 
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
@@ -38,6 +39,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
 
         .logo {
@@ -45,12 +47,14 @@
             font-weight: 900;
             letter-spacing: 3px;
             color: var(--accent-color);
+            text-transform: uppercase;
         }
 
         .cart-icon {
             font-size: 22px;
             cursor: pointer;
             position: relative;
+            color: var(--text-color);
         }
 
         #cart-count {
@@ -65,29 +69,89 @@
             font-weight: bold;
         }
 
+        /* Hero Section */
         .hero {
             text-align: center;
-            padding: 60px 20px;
-            background: #111116;
+            padding: 80px 20px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200') center/cover;
             border-bottom: 1px solid var(--border-color);
         }
 
         .hero h1 {
-            font-size: 36px;
+            font-size: 42px;
             margin-bottom: 10px;
-            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .hero p {
             color: var(--text-muted);
-            font-size: 16px;
+            font-size: 18px;
         }
 
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 30px 8% 10px;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 15px 12px 40px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-color);
+            outline: none;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .category-filters {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 8px 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: 0.3s;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* Products Grid */
         .products-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            padding: 40px 8%;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            padding: 30px 8% 60px;
         }
 
         .product-card {
@@ -98,185 +162,59 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
         }
 
         .product-card img {
             width: 100%;
-            height: 260px;
+            height: 280px;
             object-fit: cover;
         }
 
         .product-info {
-            padding: 15px;
+            padding: 20px;
         }
 
         .product-title {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .product-price {
             color: var(--accent-color);
             font-weight: bold;
             font-size: 18px;
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .add-to-cart {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             background: var(--accent-color);
             color: white;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.2s;
         }
 
+        .add-to-cart:hover {
+            background: #c02633;
+        }
+
+        /* Cart Modal Drawer */
         .cart-modal {
             display: none;
             position: fixed;
             top: 0;
             right: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            justify-content: flex-end;
-            z-index: 1000;
-        }
-
-        .cart-content {
-            background: var(--card-bg);
-            width: 100%;
-            max-width: 400px;
-            height: 100%;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto;
-        }
-
-        .close-btn {
-            font-size: 28px;
-            cursor: pointer;
-            align-self: flex-end;
-        }
-
-        #cart-items {
-            flex-grow: 1;
-            margin-top: 20px;
-        }
-
-        .cart-item {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .checkout-btn {
-            background: #25D366;
-            color: white;
-            border: none;
-            padding: 12px;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 8px;
-            cursor: pointer;
-            margin-top: 15px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">AKATSUKI</div>
-        <div class="cart-icon" onclick="toggleCart()">
-            <i class="fas fa-shopping-bag"></i>
-            <span id="cart-count">0</span>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h1>AKATSUKI STREETWEAR</h1>
-        <p>Collection Exclusive 2026</p>
-    </section>
-
-    <main class="products-container" id="products-list"></main>
-
-    <div class="cart-modal" id="cart-modal">
-        <div class="cart-content">
-            <span class="close-btn" onclick="toggleCart()">&times;</span>
-            <h2>Mon Panier</h2>
-            <div id="cart-items"></div>
-            <div style="margin-top: 15px; font-weight: bold;">
-                Total: <span id="total-price">0</span> DH
-            </div>
-            <button class="checkout-btn" onclick="sendToWhatsApp()">Commander sur WhatsApp</button>
-        </div>
-    </div>
-
-    <script>
-        const WHATSAPP_NUMBER = "212600000000";
-
-        const products = [
-            { id: 1, title: "Oversized Hoodie - Itachi Edition", price: 299, image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=500" },
-            { id: 2, title: "T-Shirt Graphic - Sukuna Trap", price: 180, image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" },
-            { id: 3, title: "Cargo Pants Black Streetwear", price: 320, image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=500" }
-        ];
-
-        let cart = [];
-
-        function displayProducts() {
-            const container = document.getElementById('products-list');
-            container.innerHTML = products.map(p => `
-                <div class="product-card">
-                    <img src="${p.image}" alt="${p.title}">
-                    <div class="product-info">
-                        <div class="product-title">${p.title}</div>
-                        <div class="product-price">${p.price} DH</div>
-                        <button class="add-to-cart" onclick="addToCart(${p.id})">Ajouter au panier</button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function addToCart(id) {
-            const product = products.find(p => p.id === id);
-            cart.push(product);
-            updateCart();
-        }
-
-        function updateCart() {
-            document.getElementById('cart-count').innerText = cart.length;
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = cart.map(p => `
-                <div class="cart-item">
-                    <span>${p.title}</span>
-                    <span><b>${p.price} DH</b></span>
-                </div>
-            `).join('');
-            const total = cart.reduce((sum, p) => sum + p.price, 0);
-            document.getElementById('total-price').innerText = total;
-        }
-
-        function toggleCart() {
-            const modal = document.getElementById('cart-modal');
-            modal.style.display = (modal.style.display === 'flex') ? 'none' : 'flex';
-        }
-
-        function sendToWhatsApp() {
-            if (cart.length === 0) return alert("Panier vide !");
-            let msg = "Salam, je veux commander:\n\n";
-            cart.forEach((p, i) => msg += `${i + 1}. ${p.title} - ${p.price} DH\n`);
-            const total = cart.reduce((sum, p) => sum + p.price, 0);
-            msg += `\nTotal: ${total} DH`;
-            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
-        }
-
-        displayProducts();
-    </script>
-</body>
-</html>
+            width: 1
